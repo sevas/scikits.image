@@ -1,0 +1,16 @@
+# Sphinx inventory version 1
+# Project: scikits.image
+# Version: 0.1
+scikits.image.filter.lpi_filter mod api/scikits.image.filter.lpi_filter.html
+scikits.image.transform.hough_transform mod api/scikits.image.transform.hough_transform.html
+scikits.image.io.pil_imread mod api/scikits.image.io.pil_imread.html
+scikits.image.color.colorconv mod api/scikits.image.color.colorconv.html
+scikits.image.filter.lpi_filter.LPIFilter2D class api/scikits.image.filter.lpi_filter.html
+scikits.image.filter.lpi_filter.inverse function api/scikits.image.filter.lpi_filter.html
+scikits.image.io.pil_imread.imread function api/scikits.image.io.pil_imread.html
+scikits.image.filter.lpi_filter.wiener function api/scikits.image.filter.lpi_filter.html
+scikits.image.filter.lpi_filter.forward function api/scikits.image.filter.lpi_filter.html
+scikits.image.color.colorconv.rgb2hsv function api/scikits.image.color.colorconv.html
+scikits.image.filter.lpi_filter.constrained_least_squares function api/scikits.image.filter.lpi_filter.html
+scikits.image.filter.lpi_filter.LPIFilter2D.__init__ method api/scikits.image.filter.lpi_filter.html
+scikits.image.transform.hough_transform.hough function api/scikits.image.transform.hough_transform.html

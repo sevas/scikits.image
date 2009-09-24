@@ -1,0 +1,13 @@
+.. AUTO-GENERATED FILE -- DO NOT EDIT!
+
+transform.hough_transform
+=========================
+
+Module: :mod:`transform.hough_transform`
+----------------------------------------
+.. automodule:: scikits.image.transform.hough_transform
+
+.. currentmodule:: scikits.image.transform.hough_transform
+
+.. autofunction:: scikits.image.transform.hough_transform.hough
+

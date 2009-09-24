@@ -1,0 +1,8 @@
+.. AUTO-GENERATED FILE -- DO NOT EDIT!
+
+.. toctree::
+
+   scikits.image.color.colorconv
+   scikits.image.filter.lpi_filter
+   scikits.image.io.pil_imread
+   scikits.image.transform.hough_transform
