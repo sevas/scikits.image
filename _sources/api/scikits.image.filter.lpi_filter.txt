@@ -1,10 +1,7 @@
 .. AUTO-GENERATED FILE -- DO NOT EDIT!
 
-filter.lpi_filter
-=================
-
 Module: :mod:`filter.lpi_filter`
---------------------------------
+================================
 Inheritance diagram for ``scikits.image.filter.lpi_filter``:
 
 .. inheritance-diagram:: scikits.image.filter.lpi_filter 
@@ -13,9 +10,6 @@ Inheritance diagram for ``scikits.image.filter.lpi_filter``:
 .. automodule:: scikits.image.filter.lpi_filter
 
 .. currentmodule:: scikits.image.filter.lpi_filter
-
-Class
------
 
 :class:`LPIFilter2D`
 --------------------
@@ -32,15 +26,30 @@ Class
 Functions
 ---------
 
+.. autosummary::
+
+   scikits.image.filter.lpi_filter.constrained_least_squares
+   scikits.image.filter.lpi_filter.forward
+   scikits.image.filter.lpi_filter.inverse
+   scikits.image.filter.lpi_filter.wiener
+
+constrained_least_squares
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. autofunction:: scikits.image.filter.lpi_filter.constrained_least_squares
 
+forward
+~~~~~~~
 
 .. autofunction:: scikits.image.filter.lpi_filter.forward
 
+inverse
+~~~~~~~
 
 .. autofunction:: scikits.image.filter.lpi_filter.inverse
 
+wiener
+~~~~~~
 
 .. autofunction:: scikits.image.filter.lpi_filter.wiener
 

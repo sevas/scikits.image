@@ -1,5 +1,8 @@
 .. AUTO-GENERATED FILE -- DO NOT EDIT!
 
+scikits.image API Reference
+===========================
+
 .. toctree::
 
    scikits.image.color.colorconv

@@ -1,13 +1,20 @@
 .. AUTO-GENERATED FILE -- DO NOT EDIT!
 
-io.pil_imread
-=============
-
 Module: :mod:`io.pil_imread`
-----------------------------
+============================
 .. automodule:: scikits.image.io.pil_imread
 
 .. currentmodule:: scikits.image.io.pil_imread
+
+Functions
+---------
+
+.. autosummary::
+
+   scikits.image.io.pil_imread.imread
+
+imread
+~~~~~~
 
 .. autofunction:: scikits.image.io.pil_imread.imread
 

@@ -1,13 +1,20 @@
 .. AUTO-GENERATED FILE -- DO NOT EDIT!
 
-color.colorconv
-===============
-
 Module: :mod:`color.colorconv`
-------------------------------
+==============================
 .. automodule:: scikits.image.color.colorconv
 
 .. currentmodule:: scikits.image.color.colorconv
+
+Functions
+---------
+
+.. autosummary::
+
+   scikits.image.color.colorconv.rgb2hsv
+
+rgb2hsv
+~~~~~~~
 
 .. autofunction:: scikits.image.color.colorconv.rgb2hsv
 

@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Home &mdash; scikits.image v0.1 documentation</title>
+    <title>Installation from source &mdash; scikits.image v0.1 documentation</title>
     <link rel="stylesheet" href="static/default.css" type="text/css" />
     <link rel="stylesheet" href="static/pygments.css" type="text/css" />
     <script type="text/javascript">
@@ -19,7 +19,7 @@
     </script>
     <script type="text/javascript" src="static/jquery.js"></script>
     <script type="text/javascript" src="static/doctools.js"></script>
-    <link rel="top" title="scikits.image v0.1 documentation" href="" /> 
+    <link rel="top" title="scikits.image v0.1 documentation" href="index.html" /> 
   </head>
   <body>
     <div class="related">
@@ -40,74 +40,22 @@
         <div class="bodywrapper">
           <div class="body">
             
-
-   <h1>scikits.image v0.1 documentation</h1>
-   <p>This <a href="http://scikits.appsport.com">SciKit</a> is an
-   image processing toolbox for <a href="http://www.scipy.org">SciPy</a>.</p>
-
-   <h2>Sections</h2>
-   <table class="contentstable" align="center">
-      <tr valign="top"><td width="50%">
-      <p class="biglink">
-         <a class="biglink" href="overview.html">
-            Overview</a><br>
-         <span class="linkdescr">
-            Introduction to scikits.image.
-         </span></p>
-
-      <p class="biglink">
-         <a class="biglink" href="install.html">
-            Installation Steps</a><br>
-         <span class="linkdescr">
-            How to install scikits.image.
-         </span></p>
-
-   </td><td width="50%">
-
-      <p class="biglink">
-         <a class="biglink" href="api/api.html">
-            API Reference</a><br>
-         <span class="linkdescr">
-             Documentation for the functions included in scikits.image.
-         </span></p>
-
-      <p class="biglink">
-         <a class="biglink" href="license.html">
-            License Info</a><br>
-         <span class="linkdescr">
-             Conditions on the use and redistribution of this package.
-         </span></p>
-
-   </td></tr></table>
-
-   <h2>Indices and Tables</h2>
-
-   <table class="contentstable" align="center">
-      <tr valign="top"><td width="50%">
-      <p class="biglink">
-         <a class="biglink" href="contents.html">
-            Table of Contents</a><br>
-         <span class="linkdescr">
-            Lists all sections and subsections.
-         </span></p>
-
-      <p class="biglink">
-         <a class="biglink" href="search.html">
-            Search Page</a><br>
-         <span class="linkdescr">
-            Search this documentation.
-         </span></p>
-
-      </td><td width="50%">
-
-      <p class="biglink">
-         <a class="biglink" href="genindex.html">
-            Index</a><br>
-         <span class="linkdescr">
-            All functions, classes, terms.
-         </span></p>
-
-    </td></tr></table>
+  <div class="section" id="installation-from-source">
+<h1>Installation from source<a class="headerlink" href="#installation-from-source" title="Permalink to this headline">¶</a></h1>
+<p>Obtain the source from the git-repository at
+<a class="reference external" href="http://github.com/stefanv/scikits.gpu">http://github.com/stefanv/scikits.gpu</a>.</p>
+<p>The SciKit can be installed globally using</p>
+<div class="highlight-python"><pre>python setup.py install</pre>
+</div>
+<p>or locally using</p>
+<div class="highlight-python"><pre>python setup.py install --prefix=${HOME}</pre>
+</div>
+<p>If you prefer, you can use it without installing, by simply adding
+this path to your PYTHONPATH variable and compiling extensions
+in-place:</p>
+<div class="highlight-python"><pre>python setup.py build_ext -i</pre>
+</div>
+</div>
 
 
           </div>
@@ -115,6 +63,11 @@
       </div>
       <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
+            <h3>This Page</h3>
+            <ul class="this-page-menu">
+              <li><a href="_sources/install.txt"
+                     rel="nofollow">Show Source</a></li>
+            </ul>
           <div id="searchbox" style="display: none">
             <h3>Quick search</h3>
               <form class="search" action="search.html" method="get">
