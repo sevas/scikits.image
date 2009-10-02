@@ -53,6 +53,13 @@
   <div class="section" id="module-scikits.image.filter.lpi_filter">
 <h1>Module: <tt class="xref docutils literal"><span class="pre">filter.lpi_filter</span></tt><a class="headerlink" href="#module-scikits.image.filter.lpi_filter" title="Permalink to this headline">¶</a></h1>
 <p>Inheritance diagram for <tt class="docutils literal"><span class="pre">scikits.image.filter.lpi_filter</span></tt>:</p>
+<p class="graphviz">
+digraph inheritance90f52862c9 {
+rankdir=LR;
+size=&quot;8.0, 12.0&quot;;
+  &quot;filter.lpi_filter.LPIFilter2D&quot; [style=&quot;setlinewidth(0.5)&quot;,URL=&quot;#scikits.image.filter.lpi_filter.LPIFilter2D&quot;,fontname=Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans,height=0.25,shape=box,fontsize=10];
+}
+</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -77,7 +84,7 @@
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>impulse_response</strong> : callable f(r, c, <a href="#id1"><span class="problematic" id="id2">**</span></a>filter_params)</p>
+<tr class="field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>impulse_response</strong> : callable <cite>f(r, c, **filter_params)</cite></p>
 <blockquote class="last">
 <p>Function that yields the impulse response.  <cite>r</cite> and
 <cite>c</cite> are 1-dimensional vectors that represent row and
@@ -85,9 +92,11 @@ column positions, in other words coordinates are
 (r[0],c[0]),(r[0],c[1]) etc.  <cite>**filter_params</cite> are
 passed through.</p>
 <p>In other words, example would be called like this:</p>
-<p>r = [0,0,0,1,1,1,2,2,2]
-c = [0,1,2,0,1,2,0,1,2]
-impulse_response(r, c, <a href="#id3"><span class="problematic" id="id4">**</span></a>filter_params)</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">r</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">c</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">impulse_response</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="o">**</span><span class="n">filter_params</span><span class="p">)</span>
+</pre></div>
+</div>
 </blockquote>
 </td>
 </tr>
@@ -151,7 +160,7 @@ impulse_response(r, c, <a href="#id3"><span class="problematic" id="id4">**</spa
 <blockquote>
 <p>Input data.</p>
 </blockquote>
-<p><strong>impulse_response</strong> : callable f(r, c, <a href="#id5"><span class="problematic" id="id6">**</span></a>filter_params)</p>
+<p><strong>impulse_response</strong> : callable <cite>f(r, c, **filter_params)</cite></p>
 <blockquote>
 <p>Impulse response of the filter.  See LPIFilter2D.__init__.</p>
 </blockquote>
@@ -189,7 +198,7 @@ impulse_response(r, c, <a href="#id3"><span class="problematic" id="id4">**</spa
 <blockquote>
 <p>Input data.</p>
 </blockquote>
-<p><strong>impulse_response</strong> : callable f(r, c, <a href="#id7"><span class="problematic" id="id8">**</span></a>filter_params)</p>
+<p><strong>impulse_response</strong> : callable <cite>f(r, c, **filter_params)</cite></p>
 <blockquote>
 <p>Impulse response of the filter.  See LPIFilter2D.__init__.</p>
 </blockquote>
@@ -230,7 +239,7 @@ artefacts, so a conservative limit is recommended.</p>
 <p>Ratio between power spectrum of noise and undegraded
 image.</p>
 </blockquote>
-<p><strong>impulse_response</strong> : callable f(r, c, <a href="#id9"><span class="problematic" id="id10">**</span></a>filter_params)</p>
+<p><strong>impulse_response</strong> : callable <cite>f(r, c, **filter_params)</cite></p>
 <blockquote>
 <p>Impulse response of the filter.  See LPIFilter2D.__init__.</p>
 </blockquote>

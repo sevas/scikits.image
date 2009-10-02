@@ -8,4 +8,5 @@ scikits.image API Reference
    scikits.image.color.colorconv
    scikits.image.filter.lpi_filter
    scikits.image.io.pil_imread
+   scikits.image.transform.finite_radon_transform
    scikits.image.transform.hough_transform
