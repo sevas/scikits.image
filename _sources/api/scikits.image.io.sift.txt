@@ -1,0 +1,26 @@
+.. AUTO-GENERATED FILE -- DO NOT EDIT!
+
+Module: :mod:`io.sift`
+======================
+.. automodule:: scikits.image.io.sift
+
+.. currentmodule:: scikits.image.io.sift
+
+Functions
+---------
+
+.. autosummary::
+
+   scikits.image.io.sift.load_sift
+   scikits.image.io.sift.load_surf
+
+load_sift
+~~~~~~~~~
+
+.. autofunction:: scikits.image.io.sift.load_sift
+
+load_surf
+~~~~~~~~~
+
+.. autofunction:: scikits.image.io.sift.load_surf
+
