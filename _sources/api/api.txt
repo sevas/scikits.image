@@ -11,3 +11,4 @@ scikits.image API Reference
    scikits.image.io.sift
    scikits.image.transform.finite_radon_transform
    scikits.image.transform.hough_transform
+   scikits.image.transform.project
