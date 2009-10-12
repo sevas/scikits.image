@@ -1,0 +1,43 @@
+.. AUTO-GENERATED FILE -- DO NOT EDIT!
+
+Module: :mod:`io.collection`
+============================
+Inheritance diagram for ``scikits.image.io.collection``:
+
+.. inheritance-diagram:: scikits.image.io.collection 
+   :parts: 3
+
+.. automodule:: scikits.image.io.collection
+
+.. currentmodule:: scikits.image.io.collection
+
+:class:`ImageCollection`
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+.. autoclass:: ImageCollection
+  :members:
+  :undoc-members:
+  :show-inheritance:
+  :inherited-members:
+
+  .. automethod:: __init__
+
+:class:`MultiImage`
+~~~~~~~~~~~~~~~~~~~
+
+
+.. autoclass:: MultiImage
+  :members:
+  :undoc-members:
+  :show-inheritance:
+  :inherited-members:
+
+  .. automethod:: __init__
+
+Functions
+---------
+
+.. autosummary::
+
+

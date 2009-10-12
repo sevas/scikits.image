@@ -7,6 +7,7 @@ scikits.image API Reference
 
    scikits.image.color.colorconv
    scikits.image.filter.lpi_filter
+   scikits.image.io.collection
    scikits.image.io.pil_imread
    scikits.image.io.sift
    scikits.image.transform.finite_radon_transform
