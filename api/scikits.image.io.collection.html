@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Module: io.collection &mdash; scikits.image v0.2dev documentation</title>
+    <title>Module: io.collection &mdash; v0.2dev documentation</title>
     <link rel="stylesheet" href="../static/default.css" type="text/css" />
     <link rel="stylesheet" href="../static/pygments.css" type="text/css" />
     <script type="text/javascript">
@@ -19,7 +19,7 @@
     </script>
     <script type="text/javascript" src="../static/jquery.js"></script>
     <script type="text/javascript" src="../static/doctools.js"></script>
-    <link rel="top" title="scikits.image v0.2dev documentation" href="../index.html" />
+    <link rel="top" title="v0.2dev documentation" href="../index.html" />
     <link rel="up" title="scikits.image API Reference" href="api.html" />
     <link rel="prev" title="Module: filter.lpi_filter" href="scikits.image.filter.lpi_filter.html" /> 
   </head>
@@ -36,7 +36,10 @@
         <li class="right" >
           <a href="scikits.image.filter.lpi_filter.html" title="Module: filter.lpi_filter"
              accesskey="P">previous</a> |</li>
-        <li><a href="../contents.html">scikits.image v0.2dev documentation</a> &raquo;</li>
+    <li><a href=../index.html>scikits.image home</a> &raquo;</li>
+    
+        <li><a href="../contents.html">v0.2dev documentation</a> &raquo;</li>
+
           <li><a href="api.html" accesskey="U">scikits.image API Reference</a> &raquo;</li> 
       </ul>
     </div>  
@@ -61,30 +64,14 @@ size=&quot;8.0, 12.0&quot;;
 <area shape="rect" id="node2" href="#scikits.image.io.collection.ImageCollection" title="io.collection.ImageCollection" alt="" coords="7,5,220,33"/>
 </map>
 </p>
-<p>Read and write image files.</p>
+<p>Data structures to hold collections of images, with optional caching.</p>
 <div class="section" id="imagecollection">
 <h2><a title="scikits.image.io.collection.ImageCollection" class="reference internal" href="#scikits.image.io.collection.ImageCollection"><tt class="xref docutils literal"><span class="pre">ImageCollection</span></tt></a><a class="headerlink" href="#imagecollection" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="scikits.image.io.collection.ImageCollection">
-<em class="property">class </em><tt class="descclassname">scikits.image.io.collection.</tt><tt class="descname">ImageCollection</tt><big>(</big><em>file_pattern</em>, <em>conserve_memory=True</em>, <em>as_grey=False</em><big>)</big><a class="headerlink" href="#scikits.image.io.collection.ImageCollection" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><tt class="descclassname">scikits.image.io.collection.</tt><tt class="descname">ImageCollection</tt><big>(</big><em>file_pattern</em>, <em>conserve_memory=True</em>, <em>as_grey=False</em>, <em>dtype=None</em><big>)</big><a class="headerlink" href="#scikits.image.io.collection.ImageCollection" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <tt class="xref docutils literal"><span class="pre">object</span></tt></p>
-<p>Load and manage a collection of images.</p>
-<p class="rubric">Methods</p>
-<table border="1" class="docutils">
-<colgroup>
-<col width="10%" />
-<col width="90%" />
-</colgroup>
-<tbody valign="top">
-<tr><td><a title="scikits.image.io.collection.ImageCollection.reload" class="reference internal" href="#scikits.image.io.collection.ImageCollection.reload"><tt class="xref docutils literal"><span class="pre">reload</span></tt></a>([n])</td>
-<td>Reload one or more images from file.</td>
-</tr>
-</tbody>
-</table>
-<dl class="method">
-<dt id="scikits.image.io.collection.ImageCollection.__init__">
-<tt class="descname">__init__</tt><big>(</big><em>file_pattern</em>, <em>conserve_memory=True</em>, <em>as_grey=False</em><big>)</big><a class="headerlink" href="#scikits.image.io.collection.ImageCollection.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Load image files.</p>
+<p>Load and manage a collection of image files.</p>
 <p>Note that files are always stored in alphabetical order.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -103,9 +90,14 @@ the <tt class="docutils literal"><span class="pre">glob.glob</span></tt> functio
 time.  Otherwise, images will be cached once they are loaded.</p>
 </blockquote>
 <p><strong>as_grey</strong> : bool, optional</p>
-<blockquote class="last">
+<blockquote>
 <p>If True, convert the input images to grey-scale. This does not
 affect images that are already in a grey-scale format.</p>
+</blockquote>
+<p><strong>dtype</strong> : dtype, optional</p>
+<blockquote class="last">
+<p>NumPy data-type specifier. If given, the returned image has this type.
+If None (default), the data-type is determined automatically.</p>
 </blockquote>
 </td>
 </tr>
@@ -136,22 +128,34 @@ affect images that are already in a grey-scale format.</p>
 <p class="rubric">Attributes</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="9%" />
-<col width="14%" />
-<col width="76%" />
+<col width="10%" />
+<col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr><td>files</td>
-<td>list of str</td>
-<td>A list of files in the collection, ordered alphabetically.</td>
+<tr><td><a title="scikits.image.io.collection.ImageCollection.files" class="reference internal" href="#scikits.image.io.collection.ImageCollection.files"><tt class="xref docutils literal"><span class="pre">files</span></tt></a></td>
+<td></td>
 </tr>
-<tr><td>as_grey</td>
-<td>bool</td>
+<tr><td><a title="scikits.image.io.collection.ImageCollection.as_grey" class="reference internal" href="#scikits.image.io.collection.ImageCollection.as_grey"><tt class="xref docutils literal"><span class="pre">as_grey</span></tt></a></td>
 <td>Whether images are converted to grey-scale.</td>
 </tr>
 </tbody>
 </table>
-</dd></dl>
+<p class="rubric">Methods</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr><td><a title="scikits.image.io.collection.ImageCollection.reload" class="reference internal" href="#scikits.image.io.collection.ImageCollection.reload"><tt class="xref docutils literal"><span class="pre">reload</span></tt></a>([n])</td>
+<td>Reload one or more images from file.</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="scikits.image.io.collection.ImageCollection.__init__">
+<tt class="descname">__init__</tt><big>(</big><em>file_pattern</em>, <em>conserve_memory=True</em>, <em>as_grey=False</em>, <em>dtype=None</em><big>)</big><a class="headerlink" href="#scikits.image.io.collection.ImageCollection.__init__" title="Permalink to this definition">¶</a></dt>
+<dd>Load and manage a collection of images.</dd></dl>
 
 <dl class="attribute">
 <dt id="scikits.image.io.collection.ImageCollection.as_grey">
@@ -203,7 +207,7 @@ changed.</p>
 <h2><a title="scikits.image.io.collection.MultiImage" class="reference internal" href="#scikits.image.io.collection.MultiImage"><tt class="xref docutils literal"><span class="pre">MultiImage</span></tt></a><a class="headerlink" href="#multiimage" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="scikits.image.io.collection.MultiImage">
-<em class="property">class </em><tt class="descclassname">scikits.image.io.collection.</tt><tt class="descname">MultiImage</tt><big>(</big><em>filename</em>, <em>conserve_memory=True</em><big>)</big><a class="headerlink" href="#scikits.image.io.collection.MultiImage" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><tt class="descclassname">scikits.image.io.collection.</tt><tt class="descname">MultiImage</tt><big>(</big><em>filename</em>, <em>conserve_memory=True</em>, <em>dtype=None</em><big>)</big><a class="headerlink" href="#scikits.image.io.collection.MultiImage" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <tt class="xref docutils literal"><span class="pre">object</span></tt></p>
 <p>A class containing a single multi-frame image.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -215,9 +219,14 @@ changed.</p>
 <p>The complete path to the image file.</p>
 </blockquote>
 <p><strong>conserve_memory</strong> : bool, optional</p>
-<blockquote class="last">
+<blockquote>
 <p>Whether to conserve memory by only caching a single frame. Default is
 True.</p>
+</blockquote>
+<p><strong>dtype</strong> : dtype, optional</p>
+<blockquote class="last">
+<p>NumPy data-type specifier. If given, the returned image has this type.
+If None (default), the data-type is determined automatically.</p>
 </blockquote>
 </td>
 </tr>
@@ -242,6 +251,11 @@ from file.</p>
 <span class="go">(15, 10)</span>
 <span class="go">(15, 10)</span>
 </pre></div>
+</div>
+<p>The two frames in this image can be shown with matplotlib:</p>
+<div class="figure">
+<img alt="../_images/show_collection.png" src="../_images/show_collection.png" />
+<p class="caption">(<a class="reference external" href="../plots/show_collection.py">Source code</a>)</p>
 </div>
 <p class="rubric">Attributes</p>
 <table border="1" class="docutils">
@@ -273,8 +287,8 @@ from file.</p>
 </table>
 <dl class="method">
 <dt id="scikits.image.io.collection.MultiImage.__init__">
-<tt class="descname">__init__</tt><big>(</big><em>filename</em>, <em>conserve_memory=True</em><big>)</big><a class="headerlink" href="#scikits.image.io.collection.MultiImage.__init__" title="Permalink to this definition">¶</a></dt>
-<dd>Load a multi-img</dd></dl>
+<tt class="descname">__init__</tt><big>(</big><em>filename</em>, <em>conserve_memory=True</em>, <em>dtype=None</em><big>)</big><a class="headerlink" href="#scikits.image.io.collection.MultiImage.__init__" title="Permalink to this definition">¶</a></dt>
+<dd>Load a multi-img.</dd></dl>
 
 <dl class="attribute">
 <dt id="scikits.image.io.collection.MultiImage.conserve_memory">
@@ -359,7 +373,10 @@ from file.</p>
         <li class="right" >
           <a href="scikits.image.filter.lpi_filter.html" title="Module: filter.lpi_filter"
              >previous</a> |</li>
-        <li><a href="../contents.html">scikits.image v0.2dev documentation</a> &raquo;</li>
+    <li><a href=../index.html>scikits.image home</a> &raquo;</li>
+    
+        <li><a href="../contents.html">v0.2dev documentation</a> &raquo;</li>
+
           <li><a href="api.html" >scikits.image API Reference</a> &raquo;</li> 
       </ul>
     </div>
