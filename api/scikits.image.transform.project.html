@@ -71,9 +71,9 @@
 <dt id="scikits.image.transform.project.homography">
 <tt class="descclassname">scikits.image.transform.project.</tt><tt class="descname">homography</tt><big>(</big><em>image</em>, <em>H</em>, <em>output_shape=None</em>, <em>order=1</em>, <em>mode='constant'</em>, <em>cval=0.0</em><big>)</big><a class="headerlink" href="#scikits.image.transform.project.homography" title="Permalink to this definition">¶</a></dt>
 <dd><p>Perform a projective transformation (homography) on an image.</p>
-<p>For each pixel, given its homogeneous coordinate <img class="math" src="../_images/math/1aa9d7913003fccfc89a3c2961147dac616653a4.png" alt="\mathbf{x}
+<p>For each pixel, given its homogeneous coordinate <img class="math" src="../images/math/1aa9d7913003fccfc89a3c2961147dac616653a4.png" alt="\mathbf{x}
 = [x, y, 1]^T"/>, its target position is calculated by multiplying
-with the given matrix, <img class="math" src="../_images/math/b1902d279ba37d60bdce4e0e987b7cd19d48974e.png" alt="H"/>, to give <img class="math" src="../_images/math/42a03cd1c073037bd9cd9e953d4ab607bb70d4c5.png" alt="H \mathbf{x}"/>.
+with the given matrix, <img class="math" src="../images/math/b1902d279ba37d60bdce4e0e987b7cd19d48974e.png" alt="H"/>, to give <img class="math" src="../images/math/42a03cd1c073037bd9cd9e953d4ab607bb70d4c5.png" alt="H \mathbf{x}"/>.
 E.g., to rotate by theta degrees clockwise, the matrix should be</p>
 <div class="highlight-python"><pre>[[cos(theta) -sin(theta) 0]
  [sin(theta)  cos(theta) 0]
