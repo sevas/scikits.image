@@ -57,15 +57,14 @@ following challenges you&#8217;d like to solve.</p>
 <li><a class="reference internal" href="#tasks" id="id1">Tasks</a><ul>
 <li><a class="reference internal" href="#adapt-existing-code-for-use" id="id2">Adapt existing code for use</a></li>
 <li><a class="reference internal" href="#merge-code-provided-by-cellprofiler-team" id="id3">Merge code provided by CellProfiler team</a></li>
-<li><a class="reference internal" href="#documentation-plots" id="id4">Documentation: Plots</a></li>
-<li><a class="reference internal" href="#documentation-api-generation" id="id5">Documentation: API generation</a></li>
-<li><a class="reference internal" href="#write-new-functionality" id="id6">Write new functionality</a></li>
-<li><a class="reference internal" href="#complete-the-build-process" id="id7">Complete the build process</a></li>
+<li><a class="reference internal" href="#documentation-api-generation" id="id4">Documentation: API generation</a></li>
+<li><a class="reference internal" href="#write-new-functionality" id="id5">Write new functionality</a></li>
+<li><a class="reference internal" href="#complete-the-build-process" id="id6">Complete the build process</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#development-process" id="id8">Development process</a><ul>
-<li><a class="reference internal" href="#guidelines" id="id9">Guidelines:</a></li>
-<li><a class="reference internal" href="#bugs" id="id10">Bugs</a></li>
+<li><a class="reference internal" href="#development-process" id="id7">Development process</a><ul>
+<li><a class="reference internal" href="#guidelines" id="id8">Guidelines:</a></li>
+<li><a class="reference internal" href="#bugs" id="id9">Bugs</a></li>
 </ul>
 </li>
 </ul>
@@ -154,29 +153,8 @@ protection of GPL as an application.</pre>
 <p>Thanks to Lee Kamentsky, Thouis Jones and Anne Carpenter and their colleagues
 who contributed.</p>
 </div>
-<div class="section" id="documentation-plots">
-<h3><a class="toc-backref" href="#id4">Documentation: Plots</a><a class="headerlink" href="#documentation-plots" title="Permalink to this headline">¶</a></h3>
-<p>Taken from a post by David Warde-Farley:</p>
-<div class="highlight-python"><pre>It would be really helpful to have the output of those plot
-commands. `John Hunter's sampledoc tutorial
-&lt;http://matplotlib.sourceforge.net/sampledoc/&gt;`_
-contains instructions on how to do the requisite Sphinx twiddling
-to get matplotlib plots plotted in the Sphinx output, it's just a
-matter of someone actually *doing* it.
-
-This is exactly the kind of low-hanging fruit a SciPy/scikits/open
-source newcomer (or long-time user, first-time contributor) could do
-to get their feet wet, by the way :)  It's basically a matter of
-
-      a) forking the project on GitHub,
-      b) following the instructions at the sampledoc tutorial to make
-         plots work,
-      c) committing and pushing to your own github branch and
-      d) pinging Stefan to go look/update the live docs.</pre>
-</div>
-</div>
 <div class="section" id="documentation-api-generation">
-<h3><a class="toc-backref" href="#id5">Documentation: API generation</a><a class="headerlink" href="#documentation-api-generation" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id4">Documentation: API generation</a><a class="headerlink" href="#documentation-api-generation" title="Permalink to this headline">¶</a></h3>
 <p>The API documentation is auto-generated from source.  Currently, it&#8217;s
 mostly functional but not very clean.  For example, we currently see things
 like:</p>
@@ -194,21 +172,21 @@ can be improved, such as the chaotic index table, the class attribute tables,
 etc.</p>
 </div>
 <div class="section" id="write-new-functionality">
-<h3><a class="toc-backref" href="#id6">Write new functionality</a><a class="headerlink" href="#write-new-functionality" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id5">Write new functionality</a><a class="headerlink" href="#write-new-functionality" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Plugin structure for image IO</li>
 <li>Handle multi-page images (possibly as ImageCollection?)</li>
 </ul>
 </div>
 <div class="section" id="complete-the-build-process">
-<h3><a class="toc-backref" href="#id7">Complete the build process</a><a class="headerlink" href="#complete-the-build-process" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id6">Complete the build process</a><a class="headerlink" href="#complete-the-build-process" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Fix scripts for building Cython extensions (see <a class="reference external" href="http://www.nabble.com/problem-with-numpy.distutils-and-Cython-td25100957.html#a25100957">this thread</a>).</li>
 </ul>
 </div>
 </div>
 <div class="section" id="development-process">
-<h2><a class="toc-backref" href="#id8">Development process</a><a class="headerlink" href="#development-process" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id7">Development process</a><a class="headerlink" href="#development-process" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <ul class="simple">
 <li>Go to <a class="reference external" href="http://github.com/stefanv/scikits.image">http://github.com/stefanv/scikits.image</a>  and follow the instructions on
@@ -228,7 +206,7 @@ as long as you are <a class="reference external" href="http://tinyurl.com/lll385
 happily accept plain old unified diffs (<tt class="docutils literal"><span class="pre">git</span> <span class="pre">diff</span></tt> or <tt class="docutils literal"><span class="pre">diff</span> <span class="pre">-u</span> <span class="pre">a.txt</span>
 <span class="pre">b.txt</span></tt>) as well.</p>
 <div class="section" id="guidelines">
-<h3><a class="toc-backref" href="#id9">Guidelines:</a><a class="headerlink" href="#guidelines" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id8">Guidelines:</a><a class="headerlink" href="#guidelines" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <ul class="simple">
 <li>All code should have tests.</li>
@@ -240,7 +218,7 @@ where possible.</li>
 </blockquote>
 </div>
 <div class="section" id="bugs">
-<h3><a class="toc-backref" href="#id10">Bugs</a><a class="headerlink" href="#bugs" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id9">Bugs</a><a class="headerlink" href="#bugs" title="Permalink to this headline">¶</a></h3>
 <p>Please <a class="reference external" href="http://github.com/stefanv/scikits.image">report bugs on Github</a>.</p>
 </div>
 </div>
@@ -258,7 +236,6 @@ where possible.</li>
 <li><a class="reference external" href="#tasks">Tasks</a><ul>
 <li><a class="reference external" href="#adapt-existing-code-for-use">Adapt existing code for use</a></li>
 <li><a class="reference external" href="#merge-code-provided-by-cellprofiler-team">Merge code provided by CellProfiler team</a></li>
-<li><a class="reference external" href="#documentation-plots">Documentation: Plots</a></li>
 <li><a class="reference external" href="#documentation-api-generation">Documentation: API generation</a></li>
 <li><a class="reference external" href="#write-new-functionality">Write new functionality</a></li>
 <li><a class="reference external" href="#complete-the-build-process">Complete the build process</a></li>
