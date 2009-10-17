@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Module: io.collection &mdash; v0.2dev documentation</title>
+    <title>Module: io &mdash; v0.2dev documentation</title>
     <link rel="stylesheet" href="../static/default.css" type="text/css" />
     <link rel="stylesheet" href="../static/pygments.css" type="text/css" />
     <script type="text/javascript">
@@ -19,7 +19,9 @@
     </script>
     <script type="text/javascript" src="../static/jquery.js"></script>
     <script type="text/javascript" src="../static/doctools.js"></script>
-    <link rel="top" title="v0.2dev documentation" href="../index.html" /> 
+    <link rel="top" title="v0.2dev documentation" href="../index.html" />
+    <link rel="up" title="API Reference" href="api.html" />
+    <link rel="prev" title="Module: filter" href="scikits.image.filter.html" /> 
   </head>
   <body>
     <div class="related">
@@ -31,10 +33,14 @@
         <li class="right" >
           <a href="../modindex.html" title="Global Module Index"
              accesskey="M">modules</a> |</li>
+        <li class="right" >
+          <a href="scikits.image.filter.html" title="Module: filter"
+             accesskey="P">previous</a> |</li>
     <li><a href=../index.html>scikits.image home</a> &raquo;</li>
     
         <li><a href="../contents.html">v0.2dev documentation</a> &raquo;</li>
- 
+
+          <li><a href="api.html" accesskey="U">API Reference</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -43,27 +49,15 @@
         <div class="bodywrapper">
           <div class="body">
             
-  <div class="section" id="module-scikits.image.io.collection">
-<h1>Module: <tt class="xref docutils literal"><span class="pre">io.collection</span></tt><a class="headerlink" href="#module-scikits.image.io.collection" title="Permalink to this headline">¶</a></h1>
-<p>Inheritance diagram for <tt class="docutils literal"><span class="pre">scikits.image.io.collection</span></tt>:</p>
-<p class="graphviz">
-<img src="../images/inheritance-a42bec01dab6395622bcc6ed64da0334bb3854c9.png" alt="digraph inheritance7eb0c2f288 {
-rankdir=LR;
-size=&quot;8.0, 12.0&quot;;
-  &quot;io.collection.MultiImage&quot; [style=&quot;setlinewidth(0.5)&quot;,URL=&quot;#scikits.image.io.collection.MultiImage&quot;,fontname=Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans,height=0.25,shape=box,fontsize=10];
-  &quot;io.collection.ImageCollection&quot; [style=&quot;setlinewidth(0.5)&quot;,URL=&quot;#scikits.image.io.collection.ImageCollection&quot;,fontname=Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans,height=0.25,shape=box,fontsize=10];
-}" usemap="#inheritance7eb0c2f288" class="inheritance"/>
-<map id="inheritance7eb0c2f288" name="inheritance7eb0c2f288">
-<area shape="rect" id="node1" href="#scikits.image.io.collection.MultiImage" title="io.collection.MultiImage" alt="" coords="24,55,203,83"/>
-<area shape="rect" id="node2" href="#scikits.image.io.collection.ImageCollection" title="io.collection.ImageCollection" alt="" coords="7,5,220,33"/>
-</map>
-</p>
-<p>Data structures to hold collections of images, with optional caching.</p>
+  <div class="section" id="module-scikits.image.io">
+<h1>Module: <tt class="xref docutils literal"><span class="pre">io</span></tt><a class="headerlink" href="#module-scikits.image.io" title="Permalink to this headline">¶</a></h1>
+<p>Inheritance diagram for <tt class="docutils literal"><span class="pre">scikits.image.io</span></tt>:</p>
+<p>Utilities to read and write images in various formats.</p>
 <div class="section" id="imagecollection">
-<h2><a title="scikits.image.io.collection.ImageCollection" class="reference internal" href="#scikits.image.io.collection.ImageCollection"><tt class="xref docutils literal"><span class="pre">ImageCollection</span></tt></a><a class="headerlink" href="#imagecollection" title="Permalink to this headline">¶</a></h2>
+<h2><a title="scikits.image.io.ImageCollection" class="reference internal" href="#scikits.image.io.ImageCollection"><tt class="xref docutils literal"><span class="pre">ImageCollection</span></tt></a><a class="headerlink" href="#imagecollection" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
-<dt id="scikits.image.io.collection.ImageCollection">
-<em class="property">class </em><tt class="descclassname">scikits.image.io.collection.</tt><tt class="descname">ImageCollection</tt><big>(</big><em>file_pattern</em>, <em>conserve_memory=True</em>, <em>as_grey=False</em>, <em>dtype=None</em><big>)</big><a class="headerlink" href="#scikits.image.io.collection.ImageCollection" title="Permalink to this definition">¶</a></dt>
+<dt id="scikits.image.io.ImageCollection">
+<em class="property">class </em><tt class="descclassname">scikits.image.io.</tt><tt class="descname">ImageCollection</tt><big>(</big><em>file_pattern</em>, <em>conserve_memory=True</em>, <em>as_grey=False</em>, <em>dtype=None</em><big>)</big><a class="headerlink" href="#scikits.image.io.ImageCollection" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <tt class="xref docutils literal"><span class="pre">object</span></tt></p>
 <p>Load and manage a collection of image files.</p>
 <p>Note that files are always stored in alphabetical order.</p>
@@ -126,10 +120,10 @@ If None (default), the data-type is determined automatically.</p>
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr><td><a title="scikits.image.io.collection.ImageCollection.files" class="reference internal" href="#scikits.image.io.collection.ImageCollection.files"><tt class="xref docutils literal"><span class="pre">files</span></tt></a></td>
+<tr><td><a title="scikits.image.io.ImageCollection.files" class="reference internal" href="#scikits.image.io.ImageCollection.files"><tt class="xref docutils literal"><span class="pre">files</span></tt></a></td>
 <td></td>
 </tr>
-<tr><td><a title="scikits.image.io.collection.ImageCollection.as_grey" class="reference internal" href="#scikits.image.io.collection.ImageCollection.as_grey"><tt class="xref docutils literal"><span class="pre">as_grey</span></tt></a></td>
+<tr><td><a title="scikits.image.io.ImageCollection.as_grey" class="reference internal" href="#scikits.image.io.ImageCollection.as_grey"><tt class="xref docutils literal"><span class="pre">as_grey</span></tt></a></td>
 <td>Whether images are converted to grey-scale.</td>
 </tr>
 </tbody>
@@ -141,36 +135,36 @@ If None (default), the data-type is determined automatically.</p>
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr><td><a title="scikits.image.io.collection.ImageCollection.reload" class="reference internal" href="#scikits.image.io.collection.ImageCollection.reload"><tt class="xref docutils literal"><span class="pre">reload</span></tt></a>([n])</td>
+<tr><td><a title="scikits.image.io.ImageCollection.reload" class="reference internal" href="#scikits.image.io.ImageCollection.reload"><tt class="xref docutils literal"><span class="pre">reload</span></tt></a>([n])</td>
 <td>Reload one or more images from file.</td>
 </tr>
 </tbody>
 </table>
 <dl class="method">
-<dt id="scikits.image.io.collection.ImageCollection.__init__">
-<tt class="descname">__init__</tt><big>(</big><em>file_pattern</em>, <em>conserve_memory=True</em>, <em>as_grey=False</em>, <em>dtype=None</em><big>)</big><a class="headerlink" href="#scikits.image.io.collection.ImageCollection.__init__" title="Permalink to this definition">¶</a></dt>
+<dt id="scikits.image.io.ImageCollection.__init__">
+<tt class="descname">__init__</tt><big>(</big><em>file_pattern</em>, <em>conserve_memory=True</em>, <em>as_grey=False</em>, <em>dtype=None</em><big>)</big><a class="headerlink" href="#scikits.image.io.ImageCollection.__init__" title="Permalink to this definition">¶</a></dt>
 <dd>Load and manage a collection of images.</dd></dl>
 
 <dl class="attribute">
-<dt id="scikits.image.io.collection.ImageCollection.as_grey">
-<tt class="descname">as_grey</tt><a class="headerlink" href="#scikits.image.io.collection.ImageCollection.as_grey" title="Permalink to this definition">¶</a></dt>
+<dt id="scikits.image.io.ImageCollection.as_grey">
+<tt class="descname">as_grey</tt><a class="headerlink" href="#scikits.image.io.ImageCollection.as_grey" title="Permalink to this definition">¶</a></dt>
 <dd><p>Whether images are converted to grey-scale.</p>
 <p>If this property is changed, all images in memory get reloaded.</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="scikits.image.io.collection.ImageCollection.conserve_memory">
-<tt class="descname">conserve_memory</tt><a class="headerlink" href="#scikits.image.io.collection.ImageCollection.conserve_memory" title="Permalink to this definition">¶</a></dt>
+<dt id="scikits.image.io.ImageCollection.conserve_memory">
+<tt class="descname">conserve_memory</tt><a class="headerlink" href="#scikits.image.io.ImageCollection.conserve_memory" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
-<dt id="scikits.image.io.collection.ImageCollection.files">
-<tt class="descname">files</tt><a class="headerlink" href="#scikits.image.io.collection.ImageCollection.files" title="Permalink to this definition">¶</a></dt>
+<dt id="scikits.image.io.ImageCollection.files">
+<tt class="descname">files</tt><a class="headerlink" href="#scikits.image.io.ImageCollection.files" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
-<dt id="scikits.image.io.collection.ImageCollection.reload">
-<tt class="descname">reload</tt><big>(</big><em>n=None</em><big>)</big><a class="headerlink" href="#scikits.image.io.collection.ImageCollection.reload" title="Permalink to this definition">¶</a></dt>
+<dt id="scikits.image.io.ImageCollection.reload">
+<tt class="descname">reload</tt><big>(</big><em>n=None</em><big>)</big><a class="headerlink" href="#scikits.image.io.ImageCollection.reload" title="Permalink to this definition">¶</a></dt>
 <dd><p>Reload one or more images from file.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -198,10 +192,10 @@ changed.</p>
 
 </div>
 <div class="section" id="multiimage">
-<h2><a title="scikits.image.io.collection.MultiImage" class="reference internal" href="#scikits.image.io.collection.MultiImage"><tt class="xref docutils literal"><span class="pre">MultiImage</span></tt></a><a class="headerlink" href="#multiimage" title="Permalink to this headline">¶</a></h2>
+<h2><a title="scikits.image.io.MultiImage" class="reference internal" href="#scikits.image.io.MultiImage"><tt class="xref docutils literal"><span class="pre">MultiImage</span></tt></a><a class="headerlink" href="#multiimage" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
-<dt id="scikits.image.io.collection.MultiImage">
-<em class="property">class </em><tt class="descclassname">scikits.image.io.collection.</tt><tt class="descname">MultiImage</tt><big>(</big><em>filename</em>, <em>conserve_memory=True</em>, <em>dtype=None</em><big>)</big><a class="headerlink" href="#scikits.image.io.collection.MultiImage" title="Permalink to this definition">¶</a></dt>
+<dt id="scikits.image.io.MultiImage">
+<em class="property">class </em><tt class="descclassname">scikits.image.io.</tt><tt class="descname">MultiImage</tt><big>(</big><em>filename</em>, <em>conserve_memory=True</em>, <em>dtype=None</em><big>)</big><a class="headerlink" href="#scikits.image.io.MultiImage" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <tt class="xref docutils literal"><span class="pre">object</span></tt></p>
 <p>A class containing a single multi-frame image.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -258,10 +252,10 @@ from file.</p>
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr><td><a title="scikits.image.io.collection.MultiImage.filename" class="reference internal" href="#scikits.image.io.collection.MultiImage.filename"><tt class="xref docutils literal"><span class="pre">filename</span></tt></a></td>
+<tr><td><a title="scikits.image.io.MultiImage.filename" class="reference internal" href="#scikits.image.io.MultiImage.filename"><tt class="xref docutils literal"><span class="pre">filename</span></tt></a></td>
 <td></td>
 </tr>
-<tr><td><a title="scikits.image.io.collection.MultiImage.conserve_memory" class="reference internal" href="#scikits.image.io.collection.MultiImage.conserve_memory"><tt class="xref docutils literal"><span class="pre">conserve_memory</span></tt></a></td>
+<tr><td><a title="scikits.image.io.MultiImage.conserve_memory" class="reference internal" href="#scikits.image.io.MultiImage.conserve_memory"><tt class="xref docutils literal"><span class="pre">conserve_memory</span></tt></a></td>
 <td></td>
 </tr>
 </tbody>
@@ -280,33 +274,197 @@ from file.</p>
 </tbody>
 </table>
 <dl class="method">
-<dt id="scikits.image.io.collection.MultiImage.__init__">
-<tt class="descname">__init__</tt><big>(</big><em>filename</em>, <em>conserve_memory=True</em>, <em>dtype=None</em><big>)</big><a class="headerlink" href="#scikits.image.io.collection.MultiImage.__init__" title="Permalink to this definition">¶</a></dt>
+<dt id="scikits.image.io.MultiImage.__init__">
+<tt class="descname">__init__</tt><big>(</big><em>filename</em>, <em>conserve_memory=True</em>, <em>dtype=None</em><big>)</big><a class="headerlink" href="#scikits.image.io.MultiImage.__init__" title="Permalink to this definition">¶</a></dt>
 <dd>Load a multi-img.</dd></dl>
 
 <dl class="attribute">
-<dt id="scikits.image.io.collection.MultiImage.conserve_memory">
-<tt class="descname">conserve_memory</tt><a class="headerlink" href="#scikits.image.io.collection.MultiImage.conserve_memory" title="Permalink to this definition">¶</a></dt>
+<dt id="scikits.image.io.MultiImage.conserve_memory">
+<tt class="descname">conserve_memory</tt><a class="headerlink" href="#scikits.image.io.MultiImage.conserve_memory" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
-<dt id="scikits.image.io.collection.MultiImage.filename">
-<tt class="descname">filename</tt><a class="headerlink" href="#scikits.image.io.collection.MultiImage.filename" title="Permalink to this definition">¶</a></dt>
+<dt id="scikits.image.io.MultiImage.filename">
+<tt class="descname">filename</tt><a class="headerlink" href="#scikits.image.io.MultiImage.filename" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
-<div class="section" id="functions">
-<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
 <col width="10%" />
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
+<tr><td><a title="scikits.image.io.imread" class="reference internal" href="#scikits.image.io.imread"><tt class="xref docutils literal"><span class="pre">scikits.image.io.imread</span></tt></a>(fname[,&nbsp;flatten,&nbsp;dtype])</td>
+<td>Load an image from file.</td>
+</tr>
+<tr><td><a title="scikits.image.io.load_sift" class="reference internal" href="#scikits.image.io.load_sift"><tt class="xref docutils literal"><span class="pre">scikits.image.io.load_sift</span></tt></a>(f)</td>
+<td>Read SIFT or SURF features from a file.</td>
+</tr>
+<tr><td><a title="scikits.image.io.load_surf" class="reference internal" href="#scikits.image.io.load_surf"><tt class="xref docutils literal"><span class="pre">scikits.image.io.load_surf</span></tt></a>(f)</td>
+<td>Read SIFT or SURF features from a file.</td>
+</tr>
 </tbody>
 </table>
 </div>
+<div class="section" id="imread">
+<h2>imread<a class="headerlink" href="#imread" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="scikits.image.io.imread">
+<tt class="descclassname">scikits.image.io.</tt><tt class="descname">imread</tt><big>(</big><em>fname</em>, <em>flatten=False</em>, <em>dtype=None</em><big>)</big><a class="headerlink" href="#scikits.image.io.imread" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load an image from file.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>fname</strong> : string</p>
+<blockquote>
+<p>Image file name, e.g. <tt class="docutils literal"><span class="pre">test.jpg</span></tt>.</p>
+</blockquote>
+<p><strong>flatten</strong> : bool</p>
+<blockquote>
+<p>If true, convert the output to grey-scale.</p>
+</blockquote>
+<p><strong>dtype</strong> : dtype, optional</p>
+<blockquote>
+<p>NumPy data-type specifier. If given, the returned image has this type.
+If None (default), the data-type is determined automatically.</p>
+</blockquote>
+</td>
+</tr>
+<tr class="field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>img_array</strong> : ndarray</p>
+<blockquote class="last">
+<p>The different colour bands/channels are stored in the
+third dimension, such that a grey-image is MxN, an
+RGB-image MxNx3 and an RGBA-image MxNx4.</p>
+</blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="load-sift">
+<h2>load_sift<a class="headerlink" href="#load-sift" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="scikits.image.io.load_sift">
+<tt class="descclassname">scikits.image.io.</tt><tt class="descname">load_sift</tt><big>(</big><em>f</em><big>)</big><a class="headerlink" href="#scikits.image.io.load_sift" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read SIFT or SURF features from a file.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>f</strong> : string or open file</p>
+<blockquote>
+<p>Input file generated by the feature detectors from
+<a class="reference external" href="http://people.cs.ubc.ca/~lowe/keypoints/">http://people.cs.ubc.ca/~lowe/keypoints/</a> or
+<a class="reference external" href="http://www.vision.ee.ethz.ch/~surf/">http://www.vision.ee.ethz.ch/~surf/</a></p>
+</blockquote>
+</td>
+</tr>
+<tr class="field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>data</strong> : record array with fields</p>
+<blockquote class="last">
+<ul>
+<li><dl class="first docutils">
+<dt>row: int</dt>
+<dd><p class="first last">row position of feature</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>column: int</dt>
+<dd><p class="first last">column position of feature</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>scale: float</dt>
+<dd><p class="first last">feature scale</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>orientation: float</dt>
+<dd><p class="first last">feature orientation</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>data: array</dt>
+<dd><p class="first last">feature values</p>
+</dd>
+</dl>
+</li>
+</ul>
+</blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="load-surf">
+<h2>load_surf<a class="headerlink" href="#load-surf" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="scikits.image.io.load_surf">
+<tt class="descclassname">scikits.image.io.</tt><tt class="descname">load_surf</tt><big>(</big><em>f</em><big>)</big><a class="headerlink" href="#scikits.image.io.load_surf" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read SIFT or SURF features from a file.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>f</strong> : string or open file</p>
+<blockquote>
+<p>Input file generated by the feature detectors from
+<a class="reference external" href="http://people.cs.ubc.ca/~lowe/keypoints/">http://people.cs.ubc.ca/~lowe/keypoints/</a> or
+<a class="reference external" href="http://www.vision.ee.ethz.ch/~surf/">http://www.vision.ee.ethz.ch/~surf/</a></p>
+</blockquote>
+</td>
+</tr>
+<tr class="field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>data</strong> : record array with fields</p>
+<blockquote class="last">
+<ul>
+<li><dl class="first docutils">
+<dt>row: int</dt>
+<dd><p class="first last">row position of feature</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>column: int</dt>
+<dd><p class="first last">column position of feature</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>scale: float</dt>
+<dd><p class="first last">feature scale</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>orientation: float</dt>
+<dd><p class="first last">feature orientation</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>data: array</dt>
+<dd><p class="first last">feature values</p>
+</dd>
+</dl>
+</li>
+</ul>
+</blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
 </div>
 </div>
 
@@ -318,21 +476,26 @@ from file.</p>
         <div class="sphinxsidebarwrapper">
             <h3><a href="../contents.html">Table Of Contents</a></h3>
             <ul>
-<li><a class="reference external" href="">Module: <tt class="docutils literal"><span class="pre">io.collection</span></tt></a><ul>
+<li><a class="reference external" href="">Module: <tt class="docutils literal"><span class="pre">io</span></tt></a><ul>
 <li><a class="reference external" href="#imagecollection"><tt class="docutils literal"><span class="pre">ImageCollection</span></tt></a><ul>
 </ul>
 </li>
 <li><a class="reference external" href="#multiimage"><tt class="docutils literal"><span class="pre">MultiImage</span></tt></a><ul>
-<li><a class="reference external" href="#functions">Functions</a></li>
 </ul>
 </li>
+<li><a class="reference external" href="#imread">imread</a></li>
+<li><a class="reference external" href="#load-sift">load_sift</a></li>
+<li><a class="reference external" href="#load-surf">load_surf</a></li>
 </ul>
 </li>
 </ul>
 
+            <h4>Previous topic</h4>
+            <p class="topless"><a href="scikits.image.filter.html"
+                                  title="previous chapter">Module: <tt class="docutils literal docutils literal docutils literal"><span class="pre">filter</span></tt></a></p>
             <h3>This Page</h3>
             <ul class="this-page-menu">
-              <li><a href="../_sources/api/scikits.image.io.collection.txt"
+              <li><a href="../_sources/api/scikits.image.io.txt"
                      rel="nofollow">Show Source</a></li>
             </ul>
           <div id="searchbox" style="display: none">
@@ -361,10 +524,14 @@ from file.</p>
         <li class="right" >
           <a href="../modindex.html" title="Global Module Index"
              >modules</a> |</li>
+        <li class="right" >
+          <a href="scikits.image.filter.html" title="Module: filter"
+             >previous</a> |</li>
     <li><a href=../index.html>scikits.image home</a> &raquo;</li>
     
         <li><a href="../contents.html">v0.2dev documentation</a> &raquo;</li>
- 
+
+          <li><a href="api.html" >API Reference</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">

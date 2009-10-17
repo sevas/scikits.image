@@ -20,7 +20,7 @@
     <script type="text/javascript" src="static/jquery.js"></script>
     <script type="text/javascript" src="static/doctools.js"></script>
     <link rel="top" title="v0.2dev documentation" href="index.html" />
-    <link rel="next" title="scikits.image API Reference" href="api/api.html" /> 
+    <link rel="next" title="API Reference" href="api/api.html" /> 
   </head>
   <body>
     <div class="related">
@@ -33,7 +33,7 @@
           <a href="modindex.html" title="Global Module Index"
              accesskey="M">modules</a> |</li>
         <li class="right" >
-          <a href="api/api.html" title="scikits.image API Reference"
+          <a href="api/api.html" title="API Reference"
              accesskey="N">next</a> |</li>
     <li><a href=index.html>scikits.image home</a> &raquo;</li>
     
@@ -50,71 +50,54 @@
   <div class="section" id="table-of-contents">
 <h1>Table of Contents<a class="headerlink" href="#table-of-contents" title="Permalink to this headline">¶</a></h1>
 <ul>
-<li class="toctree-l1"><a class="reference external" href="api/api.html">scikits.image API Reference</a><ul>
-<li class="toctree-l2"><a class="reference external" href="api/scikits.image.color.colorconv.html">Module: <tt class="docutils literal"><span class="pre">color.colorconv</span></tt></a><ul>
-<li class="toctree-l3"><a class="reference external" href="api/scikits.image.color.colorconv.html#functions">Functions</a><ul>
-<li class="toctree-l4"><a class="reference external" href="api/scikits.image.color.colorconv.html#rgb2hsv">rgb2hsv</a></li>
+<li class="toctree-l1"><a class="reference external" href="api/api.html">API Reference</a><ul>
+<li class="toctree-l2"><a class="reference external" href="api/scikits.image.color.html">Module: <tt class="docutils literal"><span class="pre">color</span></tt></a><ul>
+<li class="toctree-l3"><a class="reference external" href="api/scikits.image.color.html#rgb2hsv">rgb2hsv</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference external" href="api/scikits.image.filter.html">Module: <tt class="docutils literal"><span class="pre">filter</span></tt></a><ul>
+<li class="toctree-l3"><a class="reference external" href="api/scikits.image.filter.html#lpifilter2d"><tt class="docutils literal"><span class="pre">LPIFilter2D</span></tt></a></li>
+<li class="toctree-l3"><a class="reference external" href="api/scikits.image.filter.html#inverse">inverse</a></li>
+<li class="toctree-l3"><a class="reference external" href="api/scikits.image.filter.html#wiener">wiener</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference external" href="api/scikits.image.filter.lpi_filter.html">Module: <tt class="docutils literal"><span class="pre">filter.lpi_filter</span></tt></a><ul>
-<li class="toctree-l3"><a class="reference external" href="api/scikits.image.filter.lpi_filter.html#lpifilter2d"><tt class="docutils literal"><span class="pre">LPIFilter2D</span></tt></a></li>
-<li class="toctree-l3"><a class="reference external" href="api/scikits.image.filter.lpi_filter.html#functions">Functions</a><ul>
-<li class="toctree-l4"><a class="reference external" href="api/scikits.image.filter.lpi_filter.html#constrained-least-squares">constrained_least_squares</a></li>
-<li class="toctree-l4"><a class="reference external" href="api/scikits.image.filter.lpi_filter.html#forward">forward</a></li>
-<li class="toctree-l4"><a class="reference external" href="api/scikits.image.filter.lpi_filter.html#inverse">inverse</a></li>
-<li class="toctree-l4"><a class="reference external" href="api/scikits.image.filter.lpi_filter.html#wiener">wiener</a></li>
+<li class="toctree-l2"><a class="reference external" href="api/scikits.image.io.html">Module: <tt class="docutils literal"><span class="pre">io</span></tt></a><ul>
+<li class="toctree-l3"><a class="reference external" href="api/scikits.image.io.html#imagecollection"><tt class="docutils literal"><span class="pre">ImageCollection</span></tt></a><ul class="simple">
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference external" href="api/scikits.image.io.html#multiimage"><tt class="docutils literal"><span class="pre">MultiImage</span></tt></a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference external" href="api/scikits.image.io.collection.html">Module: <tt class="docutils literal"><span class="pre">io.collection</span></tt></a><ul>
-<li class="toctree-l3"><a class="reference external" href="api/scikits.image.io.collection.html#imagecollection"><tt class="docutils literal"><span class="pre">ImageCollection</span></tt></a><ul class="simple">
+<li class="toctree-l3"><a class="reference external" href="api/scikits.image.io.html#imread">imread</a></li>
+<li class="toctree-l3"><a class="reference external" href="api/scikits.image.io.html#load-sift">load_sift</a></li>
+<li class="toctree-l3"><a class="reference external" href="api/scikits.image.io.html#load-surf">load_surf</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference external" href="api/scikits.image.io.collection.html#multiimage"><tt class="docutils literal"><span class="pre">MultiImage</span></tt></a><ul>
-<li class="toctree-l4"><a class="reference external" href="api/scikits.image.io.collection.html#functions">Functions</a></li>
+<li class="toctree-l2"><a class="reference external" href="api/scikits.image.opencv.html">Module: <tt class="docutils literal"><span class="pre">opencv</span></tt></a><ul>
+<li class="toctree-l3"><a class="reference external" href="api/scikits.image.opencv.html#cvcanny">cvCanny</a></li>
+<li class="toctree-l3"><a class="reference external" href="api/scikits.image.opencv.html#cvcornereigenvalsandvecs">cvCornerEigenValsAndVecs</a></li>
+<li class="toctree-l3"><a class="reference external" href="api/scikits.image.opencv.html#cvcornerharris">cvCornerHarris</a></li>
+<li class="toctree-l3"><a class="reference external" href="api/scikits.image.opencv.html#cvcornermineigenval">cvCornerMinEigenVal</a></li>
+<li class="toctree-l3"><a class="reference external" href="api/scikits.image.opencv.html#cvdrawchessboardcorners">cvDrawChessboardCorners</a></li>
+<li class="toctree-l3"><a class="reference external" href="api/scikits.image.opencv.html#cvfindchessboardcorners">cvFindChessboardCorners</a></li>
+<li class="toctree-l3"><a class="reference external" href="api/scikits.image.opencv.html#cvfindcornersubpix">cvFindCornerSubPix</a></li>
+<li class="toctree-l3"><a class="reference external" href="api/scikits.image.opencv.html#cvgetquadranglesubpix">cvGetQuadrangleSubPix</a></li>
+<li class="toctree-l3"><a class="reference external" href="api/scikits.image.opencv.html#cvgetrectsubpix">cvGetRectSubPix</a></li>
+<li class="toctree-l3"><a class="reference external" href="api/scikits.image.opencv.html#cvgoodfeaturestotrack">cvGoodFeaturesToTrack</a></li>
+<li class="toctree-l3"><a class="reference external" href="api/scikits.image.opencv.html#cvlaplace">cvLaplace</a></li>
+<li class="toctree-l3"><a class="reference external" href="api/scikits.image.opencv.html#cvprecornerdetect">cvPreCornerDetect</a></li>
+<li class="toctree-l3"><a class="reference external" href="api/scikits.image.opencv.html#cvresize">cvResize</a></li>
+<li class="toctree-l3"><a class="reference external" href="api/scikits.image.opencv.html#cvsmooth">cvSmooth</a></li>
+<li class="toctree-l3"><a class="reference external" href="api/scikits.image.opencv.html#cvsobel">cvSobel</a></li>
+<li class="toctree-l3"><a class="reference external" href="api/scikits.image.opencv.html#cvwarpaffine">cvWarpAffine</a></li>
+<li class="toctree-l3"><a class="reference external" href="api/scikits.image.opencv.html#cvwarpperspective">cvWarpPerspective</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference external" href="api/scikits.image.io.pil_imread.html">Module: <tt class="docutils literal"><span class="pre">io.pil_imread</span></tt></a><ul>
-<li class="toctree-l3"><a class="reference external" href="api/scikits.image.io.pil_imread.html#functions">Functions</a><ul>
-<li class="toctree-l4"><a class="reference external" href="api/scikits.image.io.pil_imread.html#imread">imread</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference external" href="api/scikits.image.io.sift.html">Module: <tt class="docutils literal"><span class="pre">io.sift</span></tt></a><ul>
-<li class="toctree-l3"><a class="reference external" href="api/scikits.image.io.sift.html#see-also">See Also</a></li>
-<li class="toctree-l3"><a class="reference external" href="api/scikits.image.io.sift.html#functions">Functions</a><ul>
-<li class="toctree-l4"><a class="reference external" href="api/scikits.image.io.sift.html#load-sift">load_sift</a></li>
-<li class="toctree-l4"><a class="reference external" href="api/scikits.image.io.sift.html#load-surf">load_surf</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference external" href="api/scikits.image.transform.finite_radon_transform.html">Module: <tt class="docutils literal"><span class="pre">transform.finite_radon_transform</span></tt></a><ul>
-<li class="toctree-l3"><a class="reference external" href="api/scikits.image.transform.finite_radon_transform.html#functions">Functions</a><ul>
-<li class="toctree-l4"><a class="reference external" href="api/scikits.image.transform.finite_radon_transform.html#frt2">frt2</a></li>
-<li class="toctree-l4"><a class="reference external" href="api/scikits.image.transform.finite_radon_transform.html#ifrt2">ifrt2</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference external" href="api/scikits.image.transform.hough_transform.html">Module: <tt class="docutils literal"><span class="pre">transform.hough_transform</span></tt></a><ul>
-<li class="toctree-l3"><a class="reference external" href="api/scikits.image.transform.hough_transform.html#functions">Functions</a><ul>
-<li class="toctree-l4"><a class="reference external" href="api/scikits.image.transform.hough_transform.html#hough">hough</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference external" href="api/scikits.image.transform.project.html">Module: <tt class="docutils literal"><span class="pre">transform.project</span></tt></a><ul>
-<li class="toctree-l3"><a class="reference external" href="api/scikits.image.transform.project.html#functions">Functions</a><ul>
-<li class="toctree-l4"><a class="reference external" href="api/scikits.image.transform.project.html#homography">homography</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference external" href="api/scikits.image.transform.html">Module: <tt class="docutils literal"><span class="pre">transform</span></tt></a><ul>
+<li class="toctree-l3"><a class="reference external" href="api/scikits.image.transform.html#frt2">frt2</a></li>
+<li class="toctree-l3"><a class="reference external" href="api/scikits.image.transform.html#homography">homography</a></li>
+<li class="toctree-l3"><a class="reference external" href="api/scikits.image.transform.html#hough">hough</a></li>
+<li class="toctree-l3"><a class="reference external" href="api/scikits.image.transform.html#ifrt2">ifrt2</a></li>
 </ul>
 </li>
 </ul>
@@ -130,7 +113,7 @@
         <div class="sphinxsidebarwrapper">
             <h4>Next topic</h4>
             <p class="topless"><a href="api/api.html"
-                                  title="next chapter">scikits.image API Reference</a></p>
+                                  title="next chapter">API Reference</a></p>
             <h3>This Page</h3>
             <ul class="this-page-menu">
               <li><a href="_sources/contents.txt"
@@ -163,7 +146,7 @@
           <a href="modindex.html" title="Global Module Index"
              >modules</a> |</li>
         <li class="right" >
-          <a href="api/api.html" title="scikits.image API Reference"
+          <a href="api/api.html" title="API Reference"
              >next</a> |</li>
     <li><a href=index.html>scikits.image home</a> &raquo;</li>
     
