@@ -324,7 +324,9 @@ from file.</p>
 </blockquote>
 <p><strong>flatten</strong> : bool</p>
 <blockquote>
-<p>If true, convert the output to grey-scale.</p>
+<p>If True, convert color images to grey-scale. If <cite>dtype</cite> is not given,
+converted color images are returned as 32-bit float images.
+Images that are already in grey-scale format are not converted.</p>
 </blockquote>
 <p><strong>dtype</strong> : dtype, optional</p>
 <blockquote>
