@@ -61,17 +61,396 @@
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
+<tr><td><a title="scikits.image.color.convert_colorspace" class="reference internal" href="#scikits.image.color.convert_colorspace"><tt class="xref docutils literal"><span class="pre">scikits.image.color.convert_colorspace</span></tt></a>(arr,&nbsp;...)</td>
+<td>Convert an image array to a new color space.</td>
+</tr>
+<tr><td><a title="scikits.image.color.hsv2rgb" class="reference internal" href="#scikits.image.color.hsv2rgb"><tt class="xref docutils literal"><span class="pre">scikits.image.color.hsv2rgb</span></tt></a>(hsv)</td>
+<td>HSV to RGB color space conversion.</td>
+</tr>
 <tr><td><a title="scikits.image.color.rgb2hsv" class="reference internal" href="#scikits.image.color.rgb2hsv"><tt class="xref docutils literal"><span class="pre">scikits.image.color.rgb2hsv</span></tt></a>(rgb)</td>
-<td>RGB to HSV color space conversion</td>
+<td>RGB to HSV color space conversion.</td>
+</tr>
+<tr><td><a title="scikits.image.color.rgb2rgbcie" class="reference internal" href="#scikits.image.color.rgb2rgbcie"><tt class="xref docutils literal"><span class="pre">scikits.image.color.rgb2rgbcie</span></tt></a>(rgb)</td>
+<td>RGB to RGB CIE color space conversion.</td>
+</tr>
+<tr><td><a title="scikits.image.color.rgb2xyz" class="reference internal" href="#scikits.image.color.rgb2xyz"><tt class="xref docutils literal"><span class="pre">scikits.image.color.rgb2xyz</span></tt></a>(rgb)</td>
+<td>RGB to XYZ color space conversion.</td>
+</tr>
+<tr><td><a title="scikits.image.color.rgbcie2rgb" class="reference internal" href="#scikits.image.color.rgbcie2rgb"><tt class="xref docutils literal"><span class="pre">scikits.image.color.rgbcie2rgb</span></tt></a>(rgbcie)</td>
+<td>RGB CIE to RGB color space conversion.</td>
+</tr>
+<tr><td><a title="scikits.image.color.xyz2rgb" class="reference internal" href="#scikits.image.color.xyz2rgb"><tt class="xref docutils literal"><span class="pre">scikits.image.color.xyz2rgb</span></tt></a>(xyz)</td>
+<td>XYZ to RGB color space conversion.</td>
 </tr>
 </tbody>
 </table>
+<div class="section" id="convert-colorspace">
+<h2>convert_colorspace<a class="headerlink" href="#convert-colorspace" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="scikits.image.color.convert_colorspace">
+<tt class="descclassname">scikits.image.color.</tt><tt class="descname">convert_colorspace</tt><big>(</big><em>arr</em>, <em>fromspace</em>, <em>tospace</em><big>)</big><a class="headerlink" href="#scikits.image.color.convert_colorspace" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert an image array to a new color space.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>arr</strong> : array_like</p>
+<blockquote>
+<p>The image to convert.</p>
+</blockquote>
+<p><strong>fromspace</strong> : str</p>
+<blockquote>
+<p>The color space to convert from. Valid color space strings are
+[&#8216;RGB&#8217;, &#8216;HSV&#8217;, &#8216;RGB CIE&#8217;, &#8216;XYZ&#8217;]. Value may also be specified as lower
+case.</p>
+</blockquote>
+<p><strong>tospace</strong> : str</p>
+<blockquote>
+<p>The color space to convert to. Valid color space strings are
+[&#8216;RGB&#8217;, &#8216;HSV&#8217;, &#8216;RGB CIE&#8217;, &#8216;XYZ&#8217;]. Value may also be specified as lower
+case.</p>
+</blockquote>
+</td>
+</tr>
+<tr class="field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>newarr</strong> : ndarray</p>
+<blockquote class="last">
+<p>The converted image.</p>
+</blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Notes</p>
+<p>Conversion occurs through the &#8220;central&#8221; RGB color space, i.e. conversion
+from XYZ to HSV is implemented as XYZ -&gt; RGB -&gt; HSV instead of directly.</p>
+<p class="rubric">Examples</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">os</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">scikits.image</span> <span class="kn">import</span> <span class="n">data_dir</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">scikits.image.io</span> <span class="kn">import</span> <span class="n">imread</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">lena</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">data_dir</span><span class="p">,</span> <span class="s">&#39;lena.png&#39;</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">lena_hsv</span> <span class="o">=</span> <span class="n">convert_colorspace</span><span class="p">(</span><span class="n">lena</span><span class="p">,</span> <span class="s">&#39;RGB&#39;</span><span class="p">,</span> <span class="s">&#39;HSV&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="hsv2rgb">
+<h2>hsv2rgb<a class="headerlink" href="#hsv2rgb" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="scikits.image.color.hsv2rgb">
+<tt class="descclassname">scikits.image.color.</tt><tt class="descname">hsv2rgb</tt><big>(</big><em>hsv</em><big>)</big><a class="headerlink" href="#scikits.image.color.hsv2rgb" title="Permalink to this definition">¶</a></dt>
+<dd><p>HSV to RGB color space conversion.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>hsv</strong> : array_like</p>
+<blockquote>
+<p>The image in HSV format, in a 3-D array of shape (.., .., 3).</p>
+</blockquote>
+</td>
+</tr>
+<tr class="field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>out</strong> : ndarray</p>
+<blockquote>
+<p>The image in RGB format, in a 3-D array of shape (.., .., 3).</p>
+</blockquote>
+</td>
+</tr>
+<tr class="field"><th class="field-name">Raises:</th><td class="field-body"><p class="first"><strong>ValueError</strong> :</p>
+<blockquote class="last">
+<p>If <cite>hsv</cite> is not a 3-D array of shape (.., .., 3).</p>
+</blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Notes</p>
+<p>The conversion assumes an input data range of [0, 1] for all color components.</p>
+<p>Conversion between RGB and HSV color spaces results in some loss of
+precision, due to integer arithmetic and rounding <a class="reference internal" href="#r7">[R7]</a>.</p>
+<p class="rubric">References</p>
+<table class="docutils citation" frame="void" id="r7" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[R7]</td><td><em>(<a class="fn-backref" href="#id1">1</a>, <a class="fn-backref" href="#id2">2</a>)</em> <a class="reference external" href="http://en.wikipedia.org/wiki/HSL_and_HSV">http://en.wikipedia.org/wiki/HSL_and_HSV</a></td></tr>
+</tbody>
+</table>
+<p class="rubric">Examples</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">os</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">scikits.image</span> <span class="kn">import</span> <span class="n">data_dir</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">scikits.image.io</span> <span class="kn">import</span> <span class="n">imread</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">lena</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">data_dir</span><span class="p">,</span> <span class="s">&#39;lena.png&#39;</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">lena_hsv</span> <span class="o">=</span> <span class="n">rgb2hsv</span><span class="p">(</span><span class="n">lena</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">lena_rgb</span> <span class="o">=</span> <span class="n">hsv2rgb</span><span class="p">(</span><span class="n">lena_hsv</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
 <div class="section" id="rgb2hsv">
 <h2>rgb2hsv<a class="headerlink" href="#rgb2hsv" title="Permalink to this headline">¶</a></h2>
 <dl class="function">
 <dt id="scikits.image.color.rgb2hsv">
 <tt class="descclassname">scikits.image.color.</tt><tt class="descname">rgb2hsv</tt><big>(</big><em>rgb</em><big>)</big><a class="headerlink" href="#scikits.image.color.rgb2hsv" title="Permalink to this definition">¶</a></dt>
-<dd>RGB to HSV color space conversion</dd></dl>
+<dd><p>RGB to HSV color space conversion.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>rgb</strong> : array_like</p>
+<blockquote>
+<p>The image in RGB format, in a 3-D array of shape (.., .., 3).</p>
+</blockquote>
+</td>
+</tr>
+<tr class="field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>out</strong> : ndarray</p>
+<blockquote>
+<p>The image in HSV format, in a 3-D array of shape (.., .., 3).</p>
+</blockquote>
+</td>
+</tr>
+<tr class="field"><th class="field-name">Raises:</th><td class="field-body"><p class="first"><strong>ValueError</strong> :</p>
+<blockquote class="last">
+<p>If <cite>rgb</cite> is not a 3-D array of shape (.., .., 3).</p>
+</blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Notes</p>
+<p>The conversion assumes an input data range of [0, 1] for all color components.</p>
+<p>Conversion between RGB and HSV color spaces results in some loss of
+precision, due to integer arithmetic and rounding <a class="reference internal" href="#r8">[R8]</a>.</p>
+<p class="rubric">References</p>
+<table class="docutils citation" frame="void" id="r8" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[R8]</td><td><em>(<a class="fn-backref" href="#id3">1</a>, <a class="fn-backref" href="#id4">2</a>)</em> <a class="reference external" href="http://en.wikipedia.org/wiki/HSL_and_HSV">http://en.wikipedia.org/wiki/HSL_and_HSV</a></td></tr>
+</tbody>
+</table>
+<p class="rubric">Examples</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">os</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">scikits.image</span> <span class="kn">import</span> <span class="n">data_dir</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">scikits.image.io</span> <span class="kn">import</span> <span class="n">imread</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">lena</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">data_dir</span><span class="p">,</span> <span class="s">&#39;lena.png&#39;</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">lena_hsv</span> <span class="o">=</span> <span class="n">color</span><span class="o">.</span><span class="n">rgb2hsv</span><span class="p">(</span><span class="n">lena</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="rgb2rgbcie">
+<h2>rgb2rgbcie<a class="headerlink" href="#rgb2rgbcie" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="scikits.image.color.rgb2rgbcie">
+<tt class="descclassname">scikits.image.color.</tt><tt class="descname">rgb2rgbcie</tt><big>(</big><em>rgb</em><big>)</big><a class="headerlink" href="#scikits.image.color.rgb2rgbcie" title="Permalink to this definition">¶</a></dt>
+<dd><p>RGB to RGB CIE color space conversion.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>rgb</strong> : array_like</p>
+<blockquote>
+<p>The image in RGB format, in a 3-D array of shape (.., .., 3).</p>
+</blockquote>
+</td>
+</tr>
+<tr class="field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>out</strong> : ndarray</p>
+<blockquote>
+<p>The image in RGB CIE format, in a 3-D array of shape (.., .., 3).</p>
+</blockquote>
+</td>
+</tr>
+<tr class="field"><th class="field-name">Raises:</th><td class="field-body"><p class="first"><strong>ValueError</strong> :</p>
+<blockquote class="last">
+<p>If <cite>rgb</cite> is not a 3-D array of shape (.., .., 3).</p>
+</blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">References</p>
+<table class="docutils citation" frame="void" id="r9" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id5">[R9]</a></td><td><a class="reference external" href="http://en.wikipedia.org/wiki/CIE_1931_color_space">http://en.wikipedia.org/wiki/CIE_1931_color_space</a></td></tr>
+</tbody>
+</table>
+<p class="rubric">Examples</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">os</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">scikits.image</span> <span class="kn">import</span> <span class="n">data_dir</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">scikits.image.io</span> <span class="kn">import</span> <span class="n">imread</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">lena</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">data_dir</span><span class="p">,</span> <span class="s">&#39;lena.png&#39;</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">lena_rgbcie</span> <span class="o">=</span> <span class="n">rgb2rgbcie</span><span class="p">(</span><span class="n">lena</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="rgb2xyz">
+<h2>rgb2xyz<a class="headerlink" href="#rgb2xyz" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="scikits.image.color.rgb2xyz">
+<tt class="descclassname">scikits.image.color.</tt><tt class="descname">rgb2xyz</tt><big>(</big><em>rgb</em><big>)</big><a class="headerlink" href="#scikits.image.color.rgb2xyz" title="Permalink to this definition">¶</a></dt>
+<dd><p>RGB to XYZ color space conversion.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>rgb</strong> : array_like</p>
+<blockquote>
+<p>The image in RGB format, in a 3-D array of shape (.., .., 3).</p>
+</blockquote>
+</td>
+</tr>
+<tr class="field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>out</strong> : ndarray</p>
+<blockquote>
+<p>The image in XYZ format, in a 3-D array of shape (.., .., 3).</p>
+</blockquote>
+</td>
+</tr>
+<tr class="field"><th class="field-name">Raises:</th><td class="field-body"><p class="first"><strong>ValueError</strong> :</p>
+<blockquote class="last">
+<p>If <cite>rgb</cite> is not a 3-D array of shape (.., .., 3).</p>
+</blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Notes</p>
+<p>The CIE XYZ color space is derived from the CIE RGB color space. Note
+however that this function converts from sRGB.</p>
+<p class="rubric">References</p>
+<table class="docutils citation" frame="void" id="r10" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id6">[R10]</a></td><td><a class="reference external" href="http://en.wikipedia.org/wiki/CIE_1931_color_space">http://en.wikipedia.org/wiki/CIE_1931_color_space</a></td></tr>
+</tbody>
+</table>
+<p class="rubric">Examples</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">os</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">scikits.image</span> <span class="kn">import</span> <span class="n">data_dir</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">scikits.image.io</span> <span class="kn">import</span> <span class="n">imread</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">lena</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">data_dir</span><span class="p">,</span> <span class="s">&#39;lena.png&#39;</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">lena_xyz</span> <span class="o">=</span> <span class="n">rgb2xyz</span><span class="p">(</span><span class="n">lena</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="rgbcie2rgb">
+<h2>rgbcie2rgb<a class="headerlink" href="#rgbcie2rgb" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="scikits.image.color.rgbcie2rgb">
+<tt class="descclassname">scikits.image.color.</tt><tt class="descname">rgbcie2rgb</tt><big>(</big><em>rgbcie</em><big>)</big><a class="headerlink" href="#scikits.image.color.rgbcie2rgb" title="Permalink to this definition">¶</a></dt>
+<dd><p>RGB CIE to RGB color space conversion.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>rgbcie</strong> : array_like</p>
+<blockquote>
+<p>The image in RGB CIE format, in a 3-D array of shape (.., .., 3).</p>
+</blockquote>
+</td>
+</tr>
+<tr class="field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>out</strong> : ndarray</p>
+<blockquote>
+<p>The image in RGB format, in a 3-D array of shape (.., .., 3).</p>
+</blockquote>
+</td>
+</tr>
+<tr class="field"><th class="field-name">Raises:</th><td class="field-body"><p class="first"><strong>ValueError</strong> :</p>
+<blockquote class="last">
+<p>If <cite>rgbcie</cite> is not a 3-D array of shape (.., .., 3).</p>
+</blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">References</p>
+<table class="docutils citation" frame="void" id="r11" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id7">[R11]</a></td><td><a class="reference external" href="http://en.wikipedia.org/wiki/CIE_1931_color_space">http://en.wikipedia.org/wiki/CIE_1931_color_space</a></td></tr>
+</tbody>
+</table>
+<p class="rubric">Examples</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">os</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">scikits.image</span> <span class="kn">import</span> <span class="n">data_dir</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">scikits.image.io</span> <span class="kn">import</span> <span class="n">imread</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">lena</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">data_dir</span><span class="p">,</span> <span class="s">&#39;lena.png&#39;</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">lena_rgbcie</span> <span class="o">=</span> <span class="n">rgb2rgbcie</span><span class="p">(</span><span class="n">lena</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">lena_rgb</span> <span class="o">=</span> <span class="n">rgbcie2rgb</span><span class="p">(</span><span class="n">lena_hsv</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="xyz2rgb">
+<h2>xyz2rgb<a class="headerlink" href="#xyz2rgb" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="scikits.image.color.xyz2rgb">
+<tt class="descclassname">scikits.image.color.</tt><tt class="descname">xyz2rgb</tt><big>(</big><em>xyz</em><big>)</big><a class="headerlink" href="#scikits.image.color.xyz2rgb" title="Permalink to this definition">¶</a></dt>
+<dd><p>XYZ to RGB color space conversion.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>xyz</strong> : array_like</p>
+<blockquote>
+<p>The image in XYZ format, in a 3-D array of shape (.., .., 3).</p>
+</blockquote>
+</td>
+</tr>
+<tr class="field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>out</strong> : ndarray</p>
+<blockquote>
+<p>The image in RGB format, in a 3-D array of shape (.., .., 3).</p>
+</blockquote>
+</td>
+</tr>
+<tr class="field"><th class="field-name">Raises:</th><td class="field-body"><p class="first"><strong>ValueError</strong> :</p>
+<blockquote class="last">
+<p>If <cite>xyz</cite> is not a 3-D array of shape (.., .., 3).</p>
+</blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Notes</p>
+<p>The CIE XYZ color space is derived from the CIE RGB color space. Note
+however that this function converts to sRGB.</p>
+<p class="rubric">References</p>
+<table class="docutils citation" frame="void" id="r12" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id8">[R12]</a></td><td><a class="reference external" href="http://en.wikipedia.org/wiki/CIE_1931_color_space">http://en.wikipedia.org/wiki/CIE_1931_color_space</a></td></tr>
+</tbody>
+</table>
+<p class="rubric">Examples</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">os</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">scikits.image</span> <span class="kn">import</span> <span class="n">data_dir</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">scikits.image.io</span> <span class="kn">import</span> <span class="n">imread</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">lena</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">data_dir</span><span class="p">,</span> <span class="s">&#39;lena.png&#39;</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">lena_xyz</span> <span class="o">=</span> <span class="n">rgb2xyz</span><span class="p">(</span><span class="n">lena</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">lena_rgb</span> <span class="o">=</span> <span class="n">xyz2rgb</span><span class="p">(</span><span class="n">lena_hsv</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
 
 </div>
 </div>
@@ -85,7 +464,13 @@
             <h3><a href="../contents.html">Table Of Contents</a></h3>
             <ul>
 <li><a class="reference external" href="">Module: <tt class="docutils literal"><span class="pre">color</span></tt></a><ul>
+<li><a class="reference external" href="#convert-colorspace">convert_colorspace</a></li>
+<li><a class="reference external" href="#hsv2rgb">hsv2rgb</a></li>
 <li><a class="reference external" href="#rgb2hsv">rgb2hsv</a></li>
+<li><a class="reference external" href="#rgb2rgbcie">rgb2rgbcie</a></li>
+<li><a class="reference external" href="#rgb2xyz">rgb2xyz</a></li>
+<li><a class="reference external" href="#rgbcie2rgb">rgbcie2rgb</a></li>
+<li><a class="reference external" href="#xyz2rgb">xyz2rgb</a></li>
 </ul>
 </li>
 </ul>
