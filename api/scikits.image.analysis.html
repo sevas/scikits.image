@@ -76,7 +76,27 @@
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field"><th class="field-name">Parameters:</th><td class="field-body"><strong>arr</strong> : (M,N) ndarray of float64</td>
+<tr class="field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>arr</strong> : (M, N) ndarray of float64</p>
+<p><strong>reach</strong> : int, optional</p>
+<blockquote>
+<p>By default (<tt class="docutils literal"><span class="pre">reach</span> <span class="pre">=</span> <span class="pre">1</span></tt>), the shortest path can only move
+one row up or down for every column it moves forward (i.e.,
+the path gradient is limited to 1).  <cite>reach</cite> defines the
+number of rows that can be skipped at each step.</p>
+</blockquote>
+</td>
+</tr>
+<tr class="field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>p</strong> : ndarray of int</p>
+<blockquote>
+<p>For each column, give the row-coordinate of the
+shortest path.</p>
+</blockquote>
+<p><strong>cost</strong> : float</p>
+<blockquote class="last">
+<p>Cost of path.  This is the absolute sum of all the
+differences along the path.</p>
+</blockquote>
+</td>
 </tr>
 </tbody>
 </table>
