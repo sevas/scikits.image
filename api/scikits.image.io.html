@@ -329,9 +329,6 @@ from file.</p>
 <tr><td><a title="scikits.image.io.imshow" class="reference internal" href="#scikits.image.io.imshow"><tt class="xref docutils literal"><span class="pre">scikits.image.io.imshow</span></tt></a>(arr,&nbsp;**plugin_args)</td>
 <td>Display an image.</td>
 </tr>
-<tr><td><a title="scikits.image.io.load_plugin" class="reference internal" href="#scikits.image.io.load_plugin"><tt class="xref docutils literal"><span class="pre">scikits.image.io.load_plugin</span></tt></a>(plugin)</td>
-<td>Load the given plugin.</td>
-</tr>
 <tr><td><a title="scikits.image.io.load_sift" class="reference internal" href="#scikits.image.io.load_sift"><tt class="xref docutils literal"><span class="pre">scikits.image.io.load_sift</span></tt></a>(f)</td>
 <td>Read SIFT or SURF features from a file.</td>
 </tr>
@@ -454,34 +451,6 @@ candidate is found.</p>
 </tr>
 </tbody>
 </table>
-</dd></dl>
-
-</div>
-<div class="section" id="load-plugin">
-<h2>load_plugin<a class="headerlink" href="#load-plugin" title="Permalink to this headline">¶</a></h2>
-<dl class="function">
-<dt id="scikits.image.io.load_plugin">
-<tt class="descclassname">scikits.image.io.</tt><tt class="descname">load_plugin</tt><big>(</big><em>plugin</em><big>)</big><a class="headerlink" href="#scikits.image.io.load_plugin" title="Permalink to this definition">¶</a></dt>
-<dd><p>Load the given plugin.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>plugin</strong> : str</p>
-<blockquote class="last">
-<p>Name of plugin to load.</p>
-</blockquote>
-</td>
-</tr>
-</tbody>
-</table>
-<div class="admonition-see-also admonition seealso">
-<p class="first admonition-title">See also</p>
-<dl class="last docutils">
-<dt><a title="scikits.image.io.plugins" class="reference internal" href="#scikits.image.io.plugins"><tt class="xref docutils literal"><span class="pre">plugins</span></tt></a></dt>
-<dd>List of available plugins</dd>
-</dl>
-</div>
 </dd></dl>
 
 </div>
@@ -679,7 +648,8 @@ have been closed.</p>
 <dl class="function">
 <dt id="scikits.image.io.use_plugin">
 <tt class="descclassname">scikits.image.io.</tt><tt class="descname">use_plugin</tt><big>(</big><em>name</em>, <em>kind=None</em><big>)</big><a class="headerlink" href="#scikits.image.io.use_plugin" title="Permalink to this definition">¶</a></dt>
-<dd><p>Set the default plugin for a specified operation.</p>
+<dd><p>Set the default plugin for a specified operation.  The plugin
+will be loaded if it hasn&#8217;t been already.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -697,8 +667,15 @@ the plugin is set for all functions.</p>
 </tr>
 </tbody>
 </table>
+<div class="admonition-see-also admonition seealso">
+<p class="first admonition-title">See also</p>
+<dl class="last docutils">
+<dt><a title="scikits.image.io.plugins" class="reference internal" href="#scikits.image.io.plugins"><tt class="xref docutils literal"><span class="pre">plugins</span></tt></a></dt>
+<dd>List of available plugins</dd>
+</dl>
+</div>
 <p class="rubric">Examples</p>
-<p>Use Python Imaging Library to read images:</p>
+<p>Use the Python Imaging Library to read images:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">scikits.image.io</span> <span class="kn">import</span> <span class="n">plugin</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">plugin</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s">&#39;PIL&#39;</span><span class="p">,</span> <span class="s">&#39;read&#39;</span><span class="p">)</span>
 </pre></div>
@@ -726,7 +703,6 @@ the plugin is set for all functions.</p>
 <li><a class="reference external" href="#imread">imread</a></li>
 <li><a class="reference external" href="#imsave">imsave</a></li>
 <li><a class="reference external" href="#imshow">imshow</a></li>
-<li><a class="reference external" href="#load-plugin">load_plugin</a></li>
 <li><a class="reference external" href="#load-sift">load_sift</a></li>
 <li><a class="reference external" href="#load-surf">load_surf</a></li>
 <li><a class="reference external" href="#plugin-info">plugin_info</a></li>

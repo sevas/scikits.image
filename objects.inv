@@ -27,7 +27,7 @@ scikits.image.transform.ifrt2 function api/scikits.image.transform.html
 scikits.image.opencv.cvGetQuadrangleSubPix function api/scikits.image.opencv.html
 scikits.image.io.ImageCollection.files attribute api/scikits.image.io.html
 scikits.image.opencv.cvCvtColor function api/scikits.image.opencv.html
-scikits.image.io.load_plugin function api/scikits.image.io.html
+scikits.image.transform.homography function api/scikits.image.transform.html
 scikits.image.color.rgb2xyz function api/scikits.image.color.html
 scikits.image.color.rgb2rgbcie function api/scikits.image.color.html
 scikits.image.opencv.cvCornerMinEigenVal function api/scikits.image.opencv.html
@@ -60,7 +60,6 @@ scikits.image.opencv.cvWarpAffine function api/scikits.image.opencv.html
 scikits.image.io.plugins function api/scikits.image.io.html
 scikits.image.color.convert_colorspace function api/scikits.image.color.html
 scikits.image.opencv.cvResize function api/scikits.image.opencv.html
-scikits.image.transform.homography function api/scikits.image.transform.html
 scikits.image.filter.wiener function api/scikits.image.filter.html
 scikits.image.opencv.cvSobel function api/scikits.image.opencv.html
 scikits.image.opencv.cvCanny function api/scikits.image.opencv.html
