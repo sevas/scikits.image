@@ -53,6 +53,30 @@
 <h1>Module: <tt class="xref docutils literal"><span class="pre">io</span></tt><a class="headerlink" href="#module-scikits.image.io" title="Permalink to this headline">¶</a></h1>
 <p>Inheritance diagram for <tt class="docutils literal"><span class="pre">scikits.image.io</span></tt>:</p>
 <p>Utilities to read and write images in various formats.</p>
+<p>The following plug-ins are available:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="86%" />
+</colgroup>
+<tbody valign="top">
+<tr><td>Plugin</td>
+<td>Description</td>
+</tr>
+<tr><td>gtk</td>
+<td>Fast image display using the GTK library</td>
+</tr>
+<tr><td>pil</td>
+<td>Image reading via the Python Imaging Library</td>
+</tr>
+<tr><td>qt</td>
+<td>Fast image display using the Qt library</td>
+</tr>
+<tr><td>matplotlib</td>
+<td>Display or save images using Matplotlib</td>
+</tr>
+</tbody>
+</table>
 <div class="section" id="imagecollection">
 <h2><a title="scikits.image.io.ImageCollection" class="reference internal" href="#scikits.image.io.ImageCollection"><tt class="xref docutils literal"><span class="pre">ImageCollection</span></tt></a><a class="headerlink" href="#imagecollection" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
@@ -313,6 +337,9 @@ from file.</p>
 </tr>
 <tr><td><a title="scikits.image.io.load_surf" class="reference internal" href="#scikits.image.io.load_surf"><tt class="xref docutils literal"><span class="pre">scikits.image.io.load_surf</span></tt></a>(f)</td>
 <td>Read SIFT or SURF features from a file.</td>
+</tr>
+<tr><td><a title="scikits.image.io.plugin_info" class="reference internal" href="#scikits.image.io.plugin_info"><tt class="xref docutils literal"><span class="pre">scikits.image.io.plugin_info</span></tt></a>(plugin)</td>
+<td>Return plugin meta-data.</td>
 </tr>
 <tr><td><a title="scikits.image.io.plugins" class="reference internal" href="#scikits.image.io.plugins"><tt class="xref docutils literal"><span class="pre">scikits.image.io.plugins</span></tt></a>([loaded])</td>
 <td>List available plugins.</td>
@@ -578,6 +605,33 @@ candidate is found.</p>
 </dd></dl>
 
 </div>
+<div class="section" id="plugin-info">
+<h2>plugin_info<a class="headerlink" href="#plugin-info" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="scikits.image.io.plugin_info">
+<tt class="descclassname">scikits.image.io.</tt><tt class="descname">plugin_info</tt><big>(</big><em>plugin</em><big>)</big><a class="headerlink" href="#scikits.image.io.plugin_info" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return plugin meta-data.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>plugin</strong> : str</p>
+<blockquote>
+<p>Name of plugin.</p>
+</blockquote>
+</td>
+</tr>
+<tr class="field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>m</strong> : dict</p>
+<blockquote class="last">
+<p>Meta data as specified in plugin <tt class="docutils literal"><span class="pre">.ini</span></tt>.</p>
+</blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
 <div class="section" id="plugins">
 <h2>plugins<a class="headerlink" href="#plugins" title="Permalink to this headline">¶</a></h2>
 <dl class="function">
@@ -675,6 +729,7 @@ the plugin is set for all functions.</p>
 <li><a class="reference external" href="#load-plugin">load_plugin</a></li>
 <li><a class="reference external" href="#load-sift">load_sift</a></li>
 <li><a class="reference external" href="#load-surf">load_surf</a></li>
+<li><a class="reference external" href="#plugin-info">plugin_info</a></li>
 <li><a class="reference external" href="#plugins">plugins</a></li>
 <li><a class="reference external" href="#show">show</a></li>
 <li><a class="reference external" href="#use-plugin">use_plugin</a></li>

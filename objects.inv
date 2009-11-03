@@ -33,6 +33,7 @@ scikits.image.color.rgb2rgbcie function api/scikits.image.color.html
 scikits.image.opencv.cvCornerMinEigenVal function api/scikits.image.opencv.html
 scikits.image.opencv.cvdoc class api/scikits.image.opencv.html
 scikits.image.opencv.cvdoc.__init__ method api/scikits.image.opencv.html
+scikits.image.opencv.cvWarpPerspective function api/scikits.image.opencv.html
 scikits.image.transform.frt2 function api/scikits.image.transform.html
 scikits.image.opencv.cvCornerEigenValsAndVecs function api/scikits.image.opencv.html
 scikits.image.opencv.cvDrawChessboardCorners function api/scikits.image.opencv.html
@@ -65,7 +66,7 @@ scikits.image.opencv.cvSobel function api/scikits.image.opencv.html
 scikits.image.opencv.cvCanny function api/scikits.image.opencv.html
 scikits.image.opencv.cvMorphologyEx function api/scikits.image.opencv.html
 scikits.image.opencv.cvLogPolar function api/scikits.image.opencv.html
-scikits.image.opencv.cvWarpPerspective function api/scikits.image.opencv.html
+scikits.image.io.plugin_info function api/scikits.image.io.html
 scikits.image.io.ImageCollection class api/scikits.image.io.html
 scikits.image.opencv.cvAdaptiveThreshold function api/scikits.image.opencv.html
 scikits.image.io.ImageCollection.as_grey attribute api/scikits.image.io.html
