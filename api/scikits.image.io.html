@@ -21,7 +21,7 @@
     <script type="text/javascript" src="../static/doctools.js"></script>
     <link rel="top" title="v0.2dev documentation" href="../index.html" />
     <link rel="up" title="API Reference" href="api.html" />
-    <link rel="prev" title="Module: filter" href="scikits.image.filter.html" /> 
+    <link rel="prev" title="Module: graph" href="scikits.image.graph.html" /> 
   </head>
   <body>
     <div class="related">
@@ -34,7 +34,7 @@
           <a href="../modindex.html" title="Global Module Index"
              accesskey="M">modules</a> |</li>
         <li class="right" >
-          <a href="scikits.image.filter.html" title="Module: filter"
+          <a href="scikits.image.graph.html" title="Module: graph"
              accesskey="P">previous</a> |</li>
     <li><a href=../index.html>scikits.image home</a> &raquo;</li>
     
@@ -341,6 +341,12 @@ from file.</p>
 <tr><td><a title="scikits.image.io.plugins" class="reference internal" href="#scikits.image.io.plugins"><tt class="xref docutils literal"><span class="pre">scikits.image.io.plugins</span></tt></a>([loaded])</td>
 <td>List available plugins.</td>
 </tr>
+<tr><td><a title="scikits.image.io.pop" class="reference internal" href="#scikits.image.io.pop"><tt class="xref docutils literal"><span class="pre">scikits.image.io.pop</span></tt></a>()</td>
+<td>Pop and image from the shared image stack.</td>
+</tr>
+<tr><td><a title="scikits.image.io.push" class="reference internal" href="#scikits.image.io.push"><tt class="xref docutils literal"><span class="pre">scikits.image.io.push</span></tt></a>(img)</td>
+<td>Push an image onto the shared image stack.</td>
+</tr>
 <tr><td><a title="scikits.image.io.show" class="reference internal" href="#scikits.image.io.show"><tt class="xref docutils literal"><span class="pre">scikits.image.io.show</span></tt></a>()</td>
 <td>Display pending images.</td>
 </tr>
@@ -623,6 +629,48 @@ all plugins are shown.</p>
 </dd></dl>
 
 </div>
+<div class="section" id="pop">
+<h2>pop<a class="headerlink" href="#pop" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="scikits.image.io.pop">
+<tt class="descclassname">scikits.image.io.</tt><tt class="descname">pop</tt><big>(</big><big>)</big><a class="headerlink" href="#scikits.image.io.pop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pop and image from the shared image stack.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>img</strong> : ndarray</p>
+<blockquote class="last">
+<p>Image popped from the stack.</p>
+</blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="push">
+<h2>push<a class="headerlink" href="#push" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="scikits.image.io.push">
+<tt class="descclassname">scikits.image.io.</tt><tt class="descname">push</tt><big>(</big><em>img</em><big>)</big><a class="headerlink" href="#scikits.image.io.push" title="Permalink to this definition">¶</a></dt>
+<dd><p>Push an image onto the shared image stack.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>img</strong> : ndarray</p>
+<blockquote class="last">
+<p>Image to push.</p>
+</blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
 <div class="section" id="show">
 <h2>show<a class="headerlink" href="#show" title="Permalink to this headline">¶</a></h2>
 <dl class="function">
@@ -707,6 +755,8 @@ the plugin is set for all functions.</p>
 <li><a class="reference external" href="#load-surf">load_surf</a></li>
 <li><a class="reference external" href="#plugin-info">plugin_info</a></li>
 <li><a class="reference external" href="#plugins">plugins</a></li>
+<li><a class="reference external" href="#pop">pop</a></li>
+<li><a class="reference external" href="#push">push</a></li>
 <li><a class="reference external" href="#show">show</a></li>
 <li><a class="reference external" href="#use-plugin">use_plugin</a></li>
 </ul>
@@ -714,8 +764,8 @@ the plugin is set for all functions.</p>
 </ul>
 
             <h4>Previous topic</h4>
-            <p class="topless"><a href="scikits.image.filter.html"
-                                  title="previous chapter">Module: <tt class="docutils literal docutils literal docutils literal"><span class="pre">filter</span></tt></a></p>
+            <p class="topless"><a href="scikits.image.graph.html"
+                                  title="previous chapter">Module: <tt class="docutils literal docutils literal docutils literal"><span class="pre">graph</span></tt></a></p>
             <h3>This Page</h3>
             <ul class="this-page-menu">
               <li><a href="../_sources/api/scikits.image.io.txt"
@@ -748,7 +798,7 @@ the plugin is set for all functions.</p>
           <a href="../modindex.html" title="Global Module Index"
              >modules</a> |</li>
         <li class="right" >
-          <a href="scikits.image.filter.html" title="Module: filter"
+          <a href="scikits.image.graph.html" title="Module: graph"
              >previous</a> |</li>
     <li><a href=../index.html>scikits.image home</a> &raquo;</li>
     

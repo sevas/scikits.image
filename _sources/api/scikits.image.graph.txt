@@ -1,0 +1,16 @@
+.. AUTO-GENERATED FILE -- DO NOT EDIT!
+
+Module: :mod:`graph`
+====================
+.. automodule:: scikits.image.graph
+
+.. currentmodule:: scikits.image.graph
+.. autosummary::
+
+   scikits.image.graph.shortest_path
+
+shortest_path
+-------------
+
+.. autofunction:: scikits.image.graph.shortest_path
+
