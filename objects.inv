@@ -1,6 +1,6 @@
 # Sphinx inventory version 1
 # Project: scikits.image
-# Version: 0.2
+# Version: 0.2.1
 scikits.image.filter mod api/scikits.image.filter.html
 scikits.image.graph mod api/scikits.image.graph.html
 scikits.image.io mod api/scikits.image.io.html
