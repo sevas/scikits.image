@@ -1,6 +1,6 @@
 # Sphinx inventory version 1
 # Project: scikits.image
-# Version: 0.2dev
+# Version: 0.2
 scikits.image.filter mod api/scikits.image.filter.html
 scikits.image.graph mod api/scikits.image.graph.html
 scikits.image.io mod api/scikits.image.io.html
@@ -60,6 +60,7 @@ scikits.image.color.xyz2rgb function api/scikits.image.color.html
 scikits.image.io.imshow function api/scikits.image.io.html
 scikits.image.io.load_sift function api/scikits.image.io.html
 scikits.image.opencv.cvWarpAffine function api/scikits.image.opencv.html
+scikits.image.opencv.cvUndistort2 function api/scikits.image.opencv.html
 scikits.image.io.plugins function api/scikits.image.io.html
 scikits.image.color.convert_colorspace function api/scikits.image.color.html
 scikits.image.opencv.cvResize function api/scikits.image.opencv.html

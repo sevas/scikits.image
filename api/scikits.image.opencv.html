@@ -5,13 +5,13 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Module: opencv &mdash; v0.2dev documentation</title>
+    <title>Module: opencv &mdash; v0.2 documentation</title>
     <link rel="stylesheet" href="../static/default.css" type="text/css" />
     <link rel="stylesheet" href="../static/pygments.css" type="text/css" />
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '0.2dev',
+        VERSION:     '0.2',
         COLLAPSE_MODINDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -19,7 +19,7 @@
     </script>
     <script type="text/javascript" src="../static/jquery.js"></script>
     <script type="text/javascript" src="../static/doctools.js"></script>
-    <link rel="top" title="v0.2dev documentation" href="../index.html" />
+    <link rel="top" title="v0.2 documentation" href="../index.html" />
     <link rel="up" title="API Reference" href="api.html" />
     <link rel="next" title="Module: transform" href="scikits.image.transform.html" /> 
   </head>
@@ -38,7 +38,7 @@
              accesskey="N">next</a> |</li>
     <li><a href=../index.html>scikits.image home</a> &raquo;</li>
     
-        <li><a href="../contents.html">v0.2dev documentation</a> &raquo;</li>
+        <li><a href="../contents.html">v0.2 documentation</a> &raquo;</li>
 
           <li><a href="api.html" accesskey="U">API Reference</a> &raquo;</li> 
       </ul>
@@ -155,6 +155,9 @@ each function.</p>
 <tr><td><a title="scikits.image.opencv.cvThreshold" class="reference internal" href="#scikits.image.opencv.cvThreshold"><tt class="xref docutils literal"><span class="pre">scikits.image.opencv.cvThreshold</span></tt></a>(src,&nbsp;threshold)</td>
 <td>Threshold an image.</td>
 </tr>
+<tr><td><a title="scikits.image.opencv.cvUndistort2" class="reference internal" href="#scikits.image.opencv.cvUndistort2"><tt class="xref docutils literal"><span class="pre">scikits.image.opencv.cvUndistort2</span></tt></a>(src,&nbsp;...)</td>
+<td>Undistorts an image given the camera intrinsics matrix and distortions vector.</td>
+</tr>
 <tr><td><a title="scikits.image.opencv.cvWarpAffine" class="reference internal" href="#scikits.image.opencv.cvWarpAffine"><tt class="xref docutils literal"><span class="pre">scikits.image.opencv.cvWarpAffine</span></tt></a>(src,&nbsp;warpmat)</td>
 <td>Applies an affine transformation to the image.</td>
 </tr>
@@ -212,10 +215,10 @@ CV_THRESH_BINARY_INV (0 if src(x,y) &gt; threshold else max_value)</p>
 </tbody>
 </table>
 <p class="rubric">References</p>
-<table class="docutils citation" frame="void" id="r42" rules="none">
+<table class="docutils citation" frame="void" id="r43" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id1">[R42]</a></td><td>OpenCV documentation for <cite>cvAdaptiveThreshold</cite>, <a class="reference external" href="http://opencv.willowgarage.com/documentation/image_processing.html#cvAdaptiveThreshold">http://opencv.willowgarage.com/documentation/image_processing.html#cvAdaptiveThreshold</a>.</td></tr>
+<tr><td class="label"><a class="fn-backref" href="#id1">[R43]</a></td><td>OpenCV documentation for <cite>cvAdaptiveThreshold</cite>, <a class="reference external" href="http://opencv.willowgarage.com/documentation/image_processing.html#cvAdaptiveThreshold">http://opencv.willowgarage.com/documentation/image_processing.html#cvAdaptiveThreshold</a>.</td></tr>
 </tbody>
 </table>
 </dd></dl>
@@ -262,10 +265,10 @@ Distortion is the 5-vector of distortion coefficients.</p>
 </tbody>
 </table>
 <p class="rubric">References</p>
-<table class="docutils citation" frame="void" id="r43" rules="none">
+<table class="docutils citation" frame="void" id="r44" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id2">[R43]</a></td><td>OpenCV documentation for <cite>cvCalibrateCamera2</cite>, <a class="reference external" href="http://opencv.willowgarage.com/documentation/camera_calibration_and_3d_reconstruction.html#cvCalibrateCamera2">http://opencv.willowgarage.com/documentation/camera_calibration_and_3d_reconstruction.html#cvCalibrateCamera2</a>.</td></tr>
+<tr><td class="label"><a class="fn-backref" href="#id2">[R44]</a></td><td>OpenCV documentation for <cite>cvCalibrateCamera2</cite>, <a class="reference external" href="http://opencv.willowgarage.com/documentation/camera_calibration_and_3d_reconstruction.html#cvCalibrateCamera2">http://opencv.willowgarage.com/documentation/camera_calibration_and_3d_reconstruction.html#cvCalibrateCamera2</a>.</td></tr>
 </tbody>
 </table>
 </dd></dl>
@@ -309,10 +312,10 @@ edge detection to src.</p>
 </tbody>
 </table>
 <p class="rubric">References</p>
-<table class="docutils citation" frame="void" id="r44" rules="none">
+<table class="docutils citation" frame="void" id="r45" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id3">[R44]</a></td><td>OpenCV documentation for <cite>cvCanny</cite>, <a class="reference external" href="http://opencv.willowgarage.com/documentation/image_processing.html#cvCanny">http://opencv.willowgarage.com/documentation/image_processing.html#cvCanny</a>.</td></tr>
+<tr><td class="label"><a class="fn-backref" href="#id3">[R45]</a></td><td>OpenCV documentation for <cite>cvCanny</cite>, <a class="reference external" href="http://opencv.willowgarage.com/documentation/image_processing.html#cvCanny">http://opencv.willowgarage.com/documentation/image_processing.html#cvCanny</a>.</td></tr>
 </tbody>
 </table>
 </dd></dl>
@@ -356,10 +359,10 @@ of src.</p>
 </tbody>
 </table>
 <p class="rubric">References</p>
-<table class="docutils citation" frame="void" id="r45" rules="none">
+<table class="docutils citation" frame="void" id="r46" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id4">[R45]</a></td><td>OpenCV documentation for <cite>cvCornerEigenValsAndVecs</cite>, <a class="reference external" href="http://opencv.willowgarage.com/documentation/image_processing.html#cvCornerEigenValsAndVecs">http://opencv.willowgarage.com/documentation/image_processing.html#cvCornerEigenValsAndVecs</a>.</td></tr>
+<tr><td class="label"><a class="fn-backref" href="#id4">[R46]</a></td><td>OpenCV documentation for <cite>cvCornerEigenValsAndVecs</cite>, <a class="reference external" href="http://opencv.willowgarage.com/documentation/image_processing.html#cvCornerEigenValsAndVecs">http://opencv.willowgarage.com/documentation/image_processing.html#cvCornerEigenValsAndVecs</a>.</td></tr>
 </tbody>
 </table>
 </dd></dl>
@@ -410,10 +413,10 @@ neighborhood. Then, it stores det(M) - k * trace(M)**2
 to the output image. Corners in the image can be found as the
 local maxima of the output image.</p>
 <p class="rubric">References</p>
-<table class="docutils citation" frame="void" id="r46" rules="none">
+<table class="docutils citation" frame="void" id="r47" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id5">[R46]</a></td><td>OpenCV documentation for <cite>cvCornerHarris</cite>, <a class="reference external" href="http://opencv.willowgarage.com/documentation/image_processing.html#cvCornerHarris">http://opencv.willowgarage.com/documentation/image_processing.html#cvCornerHarris</a>.</td></tr>
+<tr><td class="label"><a class="fn-backref" href="#id5">[R47]</a></td><td>OpenCV documentation for <cite>cvCornerHarris</cite>, <a class="reference external" href="http://opencv.willowgarage.com/documentation/image_processing.html#cvCornerHarris">http://opencv.willowgarage.com/documentation/image_processing.html#cvCornerHarris</a>.</td></tr>
 </tbody>
 </table>
 </dd></dl>
@@ -454,10 +457,10 @@ the eigenvalues.</p>
 </tbody>
 </table>
 <p class="rubric">References</p>
-<table class="docutils citation" frame="void" id="r47" rules="none">
+<table class="docutils citation" frame="void" id="r48" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id6">[R47]</a></td><td>OpenCV documentation for <cite>cvCornerMinEigenVal</cite>, <a class="reference external" href="http://opencv.willowgarage.com/documentation/image_processing.html#cvCornerMinEigenVal">http://opencv.willowgarage.com/documentation/image_processing.html#cvCornerMinEigenVal</a>.</td></tr>
+<tr><td class="label"><a class="fn-backref" href="#id6">[R48]</a></td><td>OpenCV documentation for <cite>cvCornerMinEigenVal</cite>, <a class="reference external" href="http://opencv.willowgarage.com/documentation/image_processing.html#cvCornerMinEigenVal">http://opencv.willowgarage.com/documentation/image_processing.html#cvCornerMinEigenVal</a>.</td></tr>
 </tbody>
 </table>
 </dd></dl>
@@ -517,10 +520,10 @@ An exception will be raise if the dtype is not supported.
 See the OpenCV documentation for more details
 about the specific color conversions.</p>
 <p class="rubric">References</p>
-<table class="docutils citation" frame="void" id="r48" rules="none">
+<table class="docutils citation" frame="void" id="r49" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id7">[R48]</a></td><td>OpenCV documentation for <cite>cvCvtColor</cite>, <a class="reference external" href="http://opencv.willowgarage.com/documentation/image_processing.html#cvCvtColor">http://opencv.willowgarage.com/documentation/image_processing.html#cvCvtColor</a>.</td></tr>
+<tr><td class="label"><a class="fn-backref" href="#id7">[R49]</a></td><td>OpenCV documentation for <cite>cvCvtColor</cite>, <a class="reference external" href="http://opencv.willowgarage.com/documentation/image_processing.html#cvCvtColor">http://opencv.willowgarage.com/documentation/image_processing.html#cvCvtColor</a>.</td></tr>
 </tbody>
 </table>
 </dd></dl>
@@ -574,10 +577,10 @@ Otherwise, this function returns None.</p>
 </tbody>
 </table>
 <p class="rubric">References</p>
-<table class="docutils citation" frame="void" id="r49" rules="none">
+<table class="docutils citation" frame="void" id="r50" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id8">[R49]</a></td><td>OpenCV documentation for <cite>cvDilate</cite>, <a class="reference external" href="http://opencv.willowgarage.com/documentation/image_processing.html#cvDilate">http://opencv.willowgarage.com/documentation/image_processing.html#cvDilate</a>.</td></tr>
+<tr><td class="label"><a class="fn-backref" href="#id8">[R50]</a></td><td>OpenCV documentation for <cite>cvDilate</cite>, <a class="reference external" href="http://opencv.willowgarage.com/documentation/image_processing.html#cvDilate">http://opencv.willowgarage.com/documentation/image_processing.html#cvDilate</a>.</td></tr>
 </tbody>
 </table>
 </dd></dl>
@@ -624,10 +627,10 @@ the corners drawn into it.</p>
 </tbody>
 </table>
 <p class="rubric">References</p>
-<table class="docutils citation" frame="void" id="r50" rules="none">
+<table class="docutils citation" frame="void" id="r51" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id9">[R50]</a></td><td>OpenCV documentation for <cite>cvDrawChessboardCorners</cite>, <a class="reference external" href="http://opencv.willowgarage.com/documentation/camera_calibration_and_3d_reconstruction.html#cvDrawChessboardCorners">http://opencv.willowgarage.com/documentation/camera_calibration_and_3d_reconstruction.html#cvDrawChessboardCorners</a>.</td></tr>
+<tr><td class="label"><a class="fn-backref" href="#id9">[R51]</a></td><td>OpenCV documentation for <cite>cvDrawChessboardCorners</cite>, <a class="reference external" href="http://opencv.willowgarage.com/documentation/camera_calibration_and_3d_reconstruction.html#cvDrawChessboardCorners">http://opencv.willowgarage.com/documentation/camera_calibration_and_3d_reconstruction.html#cvDrawChessboardCorners</a>.</td></tr>
 </tbody>
 </table>
 </dd></dl>
@@ -681,10 +684,10 @@ Otherwise, this function returns None.</p>
 </tbody>
 </table>
 <p class="rubric">References</p>
-<table class="docutils citation" frame="void" id="r51" rules="none">
+<table class="docutils citation" frame="void" id="r52" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id10">[R51]</a></td><td>OpenCV documentation for <cite>cvErode</cite>, <a class="reference external" href="http://opencv.willowgarage.com/documentation/image_processing.html#cvErode">http://opencv.willowgarage.com/documentation/image_processing.html#cvErode</a>.</td></tr>
+<tr><td class="label"><a class="fn-backref" href="#id10">[R52]</a></td><td>OpenCV documentation for <cite>cvErode</cite>, <a class="reference external" href="http://opencv.willowgarage.com/documentation/image_processing.html#cvErode">http://opencv.willowgarage.com/documentation/image_processing.html#cvErode</a>.</td></tr>
 </tbody>
 </table>
 </dd></dl>
@@ -734,10 +737,10 @@ determines, based on the size of the image and the kernel,
 whether it will faster to do the convolution in the spatial
 or the frequency domain, and behaves accordingly.</p>
 <p class="rubric">References</p>
-<table class="docutils citation" frame="void" id="r52" rules="none">
+<table class="docutils citation" frame="void" id="r53" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id11">[R52]</a></td><td>OpenCV documentation for <cite>cvFilter2D</cite>, <a class="reference external" href="http://opencv.willowgarage.com/documentation/image_processing.html#cvFilter2D">http://opencv.willowgarage.com/documentation/image_processing.html#cvFilter2D</a>.</td></tr>
+<tr><td class="label"><a class="fn-backref" href="#id11">[R53]</a></td><td>OpenCV documentation for <cite>cvFilter2D</cite>, <a class="reference external" href="http://opencv.willowgarage.com/documentation/image_processing.html#cvFilter2D">http://opencv.willowgarage.com/documentation/image_processing.html#cvFilter2D</a>.</td></tr>
 </tbody>
 </table>
 </dd></dl>
@@ -788,10 +791,10 @@ retrieval stage.</p>
 </tbody>
 </table>
 <p class="rubric">References</p>
-<table class="docutils citation" frame="void" id="r53" rules="none">
+<table class="docutils citation" frame="void" id="r54" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id12">[R53]</a></td><td>OpenCV documentation for <cite>cvFindChessboardCorners</cite>, <a class="reference external" href="http://opencv.willowgarage.com/documentation/camera_calibration_and_3d_reconstruction.html#cvFindChessboardCorners">http://opencv.willowgarage.com/documentation/camera_calibration_and_3d_reconstruction.html#cvFindChessboardCorners</a>.</td></tr>
+<tr><td class="label"><a class="fn-backref" href="#id12">[R54]</a></td><td>OpenCV documentation for <cite>cvFindChessboardCorners</cite>, <a class="reference external" href="http://opencv.willowgarage.com/documentation/camera_calibration_and_3d_reconstruction.html#cvFindChessboardCorners">http://opencv.willowgarage.com/documentation/camera_calibration_and_3d_reconstruction.html#cvFindChessboardCorners</a>.</td></tr>
 </tbody>
 </table>
 </dd></dl>
@@ -847,10 +850,10 @@ Can be used in combination with iterations.</p>
 </tbody>
 </table>
 <p class="rubric">References</p>
-<table class="docutils citation" frame="void" id="r54" rules="none">
+<table class="docutils citation" frame="void" id="r55" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id13">[R54]</a></td><td>OpenCV documentation for <cite>cvFindCornerSubPix</cite>, <a class="reference external" href="http://opencv.willowgarage.com/documentation/image_processing.html#cvFindCornerSubPix">http://opencv.willowgarage.com/documentation/image_processing.html#cvFindCornerSubPix</a>.</td></tr>
+<tr><td class="label"><a class="fn-backref" href="#id13">[R55]</a></td><td>OpenCV documentation for <cite>cvFindCornerSubPix</cite>, <a class="reference external" href="http://opencv.willowgarage.com/documentation/image_processing.html#cvFindCornerSubPix">http://opencv.willowgarage.com/documentation/image_processing.html#cvFindCornerSubPix</a>.</td></tr>
 </tbody>
 </table>
 </dd></dl>
@@ -902,10 +905,10 @@ images is processed independently.</p>
 and should be used unless specific feature of that
 function are required.</p>
 <p class="rubric">References</p>
-<table class="docutils citation" frame="void" id="r55" rules="none">
+<table class="docutils citation" frame="void" id="r56" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id14">[R55]</a></td><td>OpenCV documentation for <cite>cvGetQuadrangleSubPix</cite>, <a class="reference external" href="http://opencv.willowgarage.com/documentation/image_processing.html#cvGetQuadrangleSubPix">http://opencv.willowgarage.com/documentation/image_processing.html#cvGetQuadrangleSubPix</a>.</td></tr>
+<tr><td class="label"><a class="fn-backref" href="#id14">[R56]</a></td><td>OpenCV documentation for <cite>cvGetQuadrangleSubPix</cite>, <a class="reference external" href="http://opencv.willowgarage.com/documentation/image_processing.html#cvGetQuadrangleSubPix">http://opencv.willowgarage.com/documentation/image_processing.html#cvGetQuadrangleSubPix</a>.</td></tr>
 </tbody>
 </table>
 </dd></dl>
@@ -952,10 +955,10 @@ lie within the image, but the bounds of the rectangle
 may extend beyond the image. Border replication is used
 to fill in missing pixels.</p>
 <p class="rubric">References</p>
-<table class="docutils citation" frame="void" id="r56" rules="none">
+<table class="docutils citation" frame="void" id="r57" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id15">[R56]</a></td><td>OpenCV documentation for <cite>cvGetRectSubPix</cite>, <a class="reference external" href="http://opencv.willowgarage.com/documentation/image_processing.html#cvGetRectSubPix">http://opencv.willowgarage.com/documentation/image_processing.html#cvGetRectSubPix</a>.</td></tr>
+<tr><td class="label"><a class="fn-backref" href="#id15">[R57]</a></td><td>OpenCV documentation for <cite>cvGetRectSubPix</cite>, <a class="reference external" href="http://opencv.willowgarage.com/documentation/image_processing.html#cvGetRectSubPix">http://opencv.willowgarage.com/documentation/image_processing.html#cvGetRectSubPix</a>.</td></tr>
 </tbody>
 </table>
 </dd></dl>
@@ -1022,10 +1025,10 @@ in an image which can be used as features in a tracking
 algorithm. It also insures that features are distanced
 from one another by at least min_distance.</p>
 <p class="rubric">References</p>
-<table class="docutils citation" frame="void" id="r57" rules="none">
+<table class="docutils citation" frame="void" id="r58" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id16">[R57]</a></td><td>OpenCV documentation for <cite>cvGoodFeaturesToTrack</cite>, <a class="reference external" href="http://opencv.willowgarage.com/documentation/image_processing.html#cvGoodFeaturesToTrack">http://opencv.willowgarage.com/documentation/image_processing.html#cvGoodFeaturesToTrack</a>.</td></tr>
+<tr><td class="label"><a class="fn-backref" href="#id16">[R58]</a></td><td>OpenCV documentation for <cite>cvGoodFeaturesToTrack</cite>, <a class="reference external" href="http://opencv.willowgarage.com/documentation/image_processing.html#cvGoodFeaturesToTrack">http://opencv.willowgarage.com/documentation/image_processing.html#cvGoodFeaturesToTrack</a>.</td></tr>
 </tbody>
 </table>
 </dd></dl>
@@ -1068,10 +1071,10 @@ or any combination of these two.</p>
 </tbody>
 </table>
 <p class="rubric">References</p>
-<table class="docutils citation" frame="void" id="r58" rules="none">
+<table class="docutils citation" frame="void" id="r59" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id17">[R58]</a></td><td>OpenCV documentation for <cite>cvIntegral</cite>, <a class="reference external" href="http://opencv.willowgarage.com/documentation/image_processing.html#cvIntegral">http://opencv.willowgarage.com/documentation/image_processing.html#cvIntegral</a>.</td></tr>
+<tr><td class="label"><a class="fn-backref" href="#id17">[R59]</a></td><td>OpenCV documentation for <cite>cvIntegral</cite>, <a class="reference external" href="http://opencv.willowgarage.com/documentation/image_processing.html#cvIntegral">http://opencv.willowgarage.com/documentation/image_processing.html#cvIntegral</a>.</td></tr>
 </tbody>
 </table>
 </dd></dl>
@@ -1107,10 +1110,10 @@ operator to src.</p>
 </tbody>
 </table>
 <p class="rubric">References</p>
-<table class="docutils citation" frame="void" id="r59" rules="none">
+<table class="docutils citation" frame="void" id="r60" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id18">[R59]</a></td><td>OpenCV documentation for <cite>cvLaplace</cite>, <a class="reference external" href="http://opencv.willowgarage.com/documentation/image_processing.html#cvLaplace">http://opencv.willowgarage.com/documentation/image_processing.html#cvLaplace</a>.</td></tr>
+<tr><td class="label"><a class="fn-backref" href="#id18">[R60]</a></td><td>OpenCV documentation for <cite>cvLaplace</cite>, <a class="reference external" href="http://opencv.willowgarage.com/documentation/image_processing.html#cvLaplace">http://opencv.willowgarage.com/documentation/image_processing.html#cvLaplace</a>.</td></tr>
 </tbody>
 </table>
 </dd></dl>
@@ -1179,10 +1182,10 @@ they are set to zero.</dd>
 for fast scale and rotation-invariant template matching,
 for object tracking and so forth.</p>
 <p class="rubric">References</p>
-<table class="docutils citation" frame="void" id="r60" rules="none">
+<table class="docutils citation" frame="void" id="r61" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id19">[R60]</a></td><td>OpenCV documentation for <cite>cvLogPolar</cite>, <a class="reference external" href="http://opencv.willowgarage.com/documentation/image_processing.html#cvLogPolar">http://opencv.willowgarage.com/documentation/image_processing.html#cvLogPolar</a>.</td></tr>
+<tr><td class="label"><a class="fn-backref" href="#id19">[R61]</a></td><td>OpenCV documentation for <cite>cvLogPolar</cite>, <a class="reference external" href="http://opencv.willowgarage.com/documentation/image_processing.html#cvLogPolar">http://opencv.willowgarage.com/documentation/image_processing.html#cvLogPolar</a>.</td></tr>
 </tbody>
 </table>
 </dd></dl>
@@ -1245,10 +1248,10 @@ Otherwise, this function returns None.</p>
 </tbody>
 </table>
 <p class="rubric">References</p>
-<table class="docutils citation" frame="void" id="r61" rules="none">
+<table class="docutils citation" frame="void" id="r62" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id20">[R61]</a></td><td>OpenCV documentation for <cite>cvMorphologyEx</cite>, <a class="reference external" href="http://opencv.willowgarage.com/documentation/image_processing.html#cvMorphologyEx">http://opencv.willowgarage.com/documentation/image_processing.html#cvMorphologyEx</a>.</td></tr>
+<tr><td class="label"><a class="fn-backref" href="#id20">[R62]</a></td><td>OpenCV documentation for <cite>cvMorphologyEx</cite>, <a class="reference external" href="http://opencv.willowgarage.com/documentation/image_processing.html#cvMorphologyEx">http://opencv.willowgarage.com/documentation/image_processing.html#cvMorphologyEx</a>.</td></tr>
 </tbody>
 </table>
 </dd></dl>
@@ -1283,10 +1286,10 @@ Otherwise, this function returns None.</p>
 </tbody>
 </table>
 <p class="rubric">References</p>
-<table class="docutils citation" frame="void" id="r62" rules="none">
+<table class="docutils citation" frame="void" id="r63" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id21">[R62]</a></td><td>OpenCV documentation for <cite>cvPreCornerDetect</cite>, <a class="reference external" href="http://opencv.willowgarage.com/documentation/image_processing.html#cvPreCornerDetect">http://opencv.willowgarage.com/documentation/image_processing.html#cvPreCornerDetect</a>.</td></tr>
+<tr><td class="label"><a class="fn-backref" href="#id21">[R63]</a></td><td>OpenCV documentation for <cite>cvPreCornerDetect</cite>, <a class="reference external" href="http://opencv.willowgarage.com/documentation/image_processing.html#cvPreCornerDetect">http://opencv.willowgarage.com/documentation/image_processing.html#cvPreCornerDetect</a>.</td></tr>
 </tbody>
 </table>
 </dd></dl>
@@ -1315,10 +1318,10 @@ in each dimension.</p>
 </tbody>
 </table>
 <p class="rubric">References</p>
-<table class="docutils citation" frame="void" id="r63" rules="none">
+<table class="docutils citation" frame="void" id="r64" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id22">[R63]</a></td><td>OpenCV documentation for <cite>cvPyrDown</cite>, <a class="reference external" href="http://opencv.willowgarage.com/documentation/image_processing.html#cvPyrDown">http://opencv.willowgarage.com/documentation/image_processing.html#cvPyrDown</a>.</td></tr>
+<tr><td class="label"><a class="fn-backref" href="#id22">[R64]</a></td><td>OpenCV documentation for <cite>cvPyrDown</cite>, <a class="reference external" href="http://opencv.willowgarage.com/documentation/image_processing.html#cvPyrDown">http://opencv.willowgarage.com/documentation/image_processing.html#cvPyrDown</a>.</td></tr>
 </tbody>
 </table>
 </dd></dl>
@@ -1347,10 +1350,10 @@ in each dimension.</p>
 </tbody>
 </table>
 <p class="rubric">References</p>
-<table class="docutils citation" frame="void" id="r64" rules="none">
+<table class="docutils citation" frame="void" id="r65" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id23">[R64]</a></td><td>OpenCV documentation for <cite>cvPyrUp</cite>, <a class="reference external" href="http://opencv.willowgarage.com/documentation/image_processing.html#cvPyrUp">http://opencv.willowgarage.com/documentation/image_processing.html#cvPyrUp</a>.</td></tr>
+<tr><td class="label"><a class="fn-backref" href="#id23">[R65]</a></td><td>OpenCV documentation for <cite>cvPyrUp</cite>, <a class="reference external" href="http://opencv.willowgarage.com/documentation/image_processing.html#cvPyrUp">http://opencv.willowgarage.com/documentation/image_processing.html#cvPyrUp</a>.</td></tr>
 </tbody>
 </table>
 </dd></dl>
@@ -1394,10 +1397,10 @@ CV_INTER_CUBIC</p>
 </tbody>
 </table>
 <p class="rubric">References</p>
-<table class="docutils citation" frame="void" id="r65" rules="none">
+<table class="docutils citation" frame="void" id="r66" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id24">[R65]</a></td><td>OpenCV documentation for <cite>cvResize</cite>, <a class="reference external" href="http://opencv.willowgarage.com/documentation/image_processing.html#cvResize">http://opencv.willowgarage.com/documentation/image_processing.html#cvResize</a>.</td></tr>
+<tr><td class="label"><a class="fn-backref" href="#id24">[R66]</a></td><td>OpenCV documentation for <cite>cvResize</cite>, <a class="reference external" href="http://opencv.willowgarage.com/documentation/image_processing.html#cvResize">http://opencv.willowgarage.com/documentation/image_processing.html#cvResize</a>.</td></tr>
 </tbody>
 </table>
 </dd></dl>
@@ -1503,10 +1506,10 @@ in_place operation is not supported.</dd>
 <p>Using standard sigma for small kernels (3x3 to 7x7)
 gives better speed.</p>
 <p class="rubric">References</p>
-<table class="docutils citation" frame="void" id="r66" rules="none">
+<table class="docutils citation" frame="void" id="r67" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id25">[R66]</a></td><td>OpenCV documentation for <cite>cvSmooth</cite>, <a class="reference external" href="http://opencv.willowgarage.com/documentation/image_processing.html#cvSmooth">http://opencv.willowgarage.com/documentation/image_processing.html#cvSmooth</a>.</td></tr>
+<tr><td class="label"><a class="fn-backref" href="#id25">[R67]</a></td><td>OpenCV documentation for <cite>cvSmooth</cite>, <a class="reference external" href="http://opencv.willowgarage.com/documentation/image_processing.html#cvSmooth">http://opencv.willowgarage.com/documentation/image_processing.html#cvSmooth</a>.</td></tr>
 </tbody>
 </table>
 </dd></dl>
@@ -1550,10 +1553,10 @@ operator to src.</p>
 </tbody>
 </table>
 <p class="rubric">References</p>
-<table class="docutils citation" frame="void" id="r67" rules="none">
+<table class="docutils citation" frame="void" id="r68" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id26">[R67]</a></td><td>OpenCV documentation for <cite>cvSobel</cite>, <a class="reference external" href="http://opencv.willowgarage.com/documentation/image_processing.html#cvSobel">http://opencv.willowgarage.com/documentation/image_processing.html#cvSobel</a>.</td></tr>
+<tr><td class="label"><a class="fn-backref" href="#id26">[R68]</a></td><td>OpenCV documentation for <cite>cvSobel</cite>, <a class="reference external" href="http://opencv.willowgarage.com/documentation/image_processing.html#cvSobel">http://opencv.willowgarage.com/documentation/image_processing.html#cvSobel</a>.</td></tr>
 </tbody>
 </table>
 </dd></dl>
@@ -1607,10 +1610,54 @@ just the thresholded image is returned.</p>
 </tbody>
 </table>
 <p class="rubric">References</p>
-<table class="docutils citation" frame="void" id="r68" rules="none">
+<table class="docutils citation" frame="void" id="r69" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id27">[R68]</a></td><td>OpenCV documentation for <cite>cvThreshold</cite>, <a class="reference external" href="http://opencv.willowgarage.com/documentation/image_processing.html#cvThreshold">http://opencv.willowgarage.com/documentation/image_processing.html#cvThreshold</a>.</td></tr>
+<tr><td class="label"><a class="fn-backref" href="#id27">[R69]</a></td><td>OpenCV documentation for <cite>cvThreshold</cite>, <a class="reference external" href="http://opencv.willowgarage.com/documentation/image_processing.html#cvThreshold">http://opencv.willowgarage.com/documentation/image_processing.html#cvThreshold</a>.</td></tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="cvundistort2">
+<h2>cvUndistort2<a class="headerlink" href="#cvundistort2" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="scikits.image.opencv.cvUndistort2">
+<tt class="descclassname">scikits.image.opencv.</tt><tt class="descname">cvUndistort2</tt><big>(</big><em>src</em>, <em>intrinsics</em>, <em>distortions</em><big>)</big><a class="headerlink" href="#scikits.image.opencv.cvUndistort2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Undistorts an image given the camera intrinsics matrix and distortions vector.
+These values can be calculated using cvCalibrateCamera2.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>src</strong> : ndarray</p>
+<blockquote>
+<p>The image to undistort</p>
+</blockquote>
+<p><strong>intrinsics</strong> : ndarray, 3x3, dtype=float64</p>
+<blockquote>
+<p>The camera intrinsics matrix.</p>
+</blockquote>
+<p><strong>distortions</strong> : ndarray, 5-vector, dtype=float64</p>
+<blockquote>
+<p>The camera distortion coefficients.</p>
+</blockquote>
+</td>
+</tr>
+<tr class="field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>out</strong> : ndarray</p>
+<blockquote class="last">
+<p>The undistorted image the same size and dtype
+as the source image.</p>
+</blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">References</p>
+<table class="docutils citation" frame="void" id="r70" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id28">[R70]</a></td><td>OpenCV documentation for <cite>cvUndistort2</cite>, <a class="reference external" href="http://opencv.willowgarage.com/documentation/camera_calibration_and_3d_reconstruction.html#cvUndistort2">http://opencv.willowgarage.com/documentation/camera_calibration_and_3d_reconstruction.html#cvUndistort2</a>.</td></tr>
 </tbody>
 </table>
 </dd></dl>
@@ -1681,10 +1728,10 @@ the inverse transform from warpmat.</dd>
 and that function should be used instead, unless specific
 features of this function are needed.</p>
 <p class="rubric">References</p>
-<table class="docutils citation" frame="void" id="r69" rules="none">
+<table class="docutils citation" frame="void" id="r71" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id28">[R69]</a></td><td>OpenCV documentation for <cite>cvWarpAffine</cite>, <a class="reference external" href="http://opencv.willowgarage.com/documentation/image_processing.html#cvWarpAffine">http://opencv.willowgarage.com/documentation/image_processing.html#cvWarpAffine</a>.</td></tr>
+<tr><td class="label"><a class="fn-backref" href="#id29">[R71]</a></td><td>OpenCV documentation for <cite>cvWarpAffine</cite>, <a class="reference external" href="http://opencv.willowgarage.com/documentation/image_processing.html#cvWarpAffine">http://opencv.willowgarage.com/documentation/image_processing.html#cvWarpAffine</a>.</td></tr>
 </tbody>
 </table>
 </dd></dl>
@@ -1752,10 +1799,10 @@ directly for pixel interpolation. Otherwise, the function finds
 the inverse transform from warpmat.</dd>
 </dl>
 <p class="rubric">References</p>
-<table class="docutils citation" frame="void" id="r70" rules="none">
+<table class="docutils citation" frame="void" id="r72" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id29">[R70]</a></td><td>OpenCV documentation for <cite>cvWarpPerspective</cite>, <a class="reference external" href="http://opencv.willowgarage.com/documentation/image_processing.html#cvWarpPerspective">http://opencv.willowgarage.com/documentation/image_processing.html#cvWarpPerspective</a>.</td></tr>
+<tr><td class="label"><a class="fn-backref" href="#id30">[R72]</a></td><td>OpenCV documentation for <cite>cvWarpPerspective</cite>, <a class="reference external" href="http://opencv.willowgarage.com/documentation/image_processing.html#cvWarpPerspective">http://opencv.willowgarage.com/documentation/image_processing.html#cvWarpPerspective</a>.</td></tr>
 </tbody>
 </table>
 </dd></dl>
@@ -1800,6 +1847,7 @@ the inverse transform from warpmat.</dd>
 <li><a class="reference external" href="#cvsmooth">cvSmooth</a></li>
 <li><a class="reference external" href="#cvsobel">cvSobel</a></li>
 <li><a class="reference external" href="#cvthreshold">cvThreshold</a></li>
+<li><a class="reference external" href="#cvundistort2">cvUndistort2</a></li>
 <li><a class="reference external" href="#cvwarpaffine">cvWarpAffine</a></li>
 <li><a class="reference external" href="#cvwarpperspective">cvWarpPerspective</a></li>
 </ul>
@@ -1845,7 +1893,7 @@ the inverse transform from warpmat.</dd>
              >next</a> |</li>
     <li><a href=../index.html>scikits.image home</a> &raquo;</li>
     
-        <li><a href="../contents.html">v0.2dev documentation</a> &raquo;</li>
+        <li><a href="../contents.html">v0.2 documentation</a> &raquo;</li>
 
           <li><a href="api.html" >API Reference</a> &raquo;</li> 
       </ul>
