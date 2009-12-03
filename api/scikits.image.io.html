@@ -5,13 +5,13 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Module: io &mdash; v0.2.1 documentation</title>
+    <title>Module: io &mdash; v0.3dev documentation</title>
     <link rel="stylesheet" href="../static/default.css" type="text/css" />
     <link rel="stylesheet" href="../static/pygments.css" type="text/css" />
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '0.2.1',
+        VERSION:     '0.3dev',
         COLLAPSE_MODINDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -19,7 +19,7 @@
     </script>
     <script type="text/javascript" src="../static/jquery.js"></script>
     <script type="text/javascript" src="../static/doctools.js"></script>
-    <link rel="top" title="v0.2.1 documentation" href="../index.html" />
+    <link rel="top" title="v0.3dev documentation" href="../index.html" />
     <link rel="up" title="API Reference" href="api.html" />
     <link rel="prev" title="Module: graph" href="scikits.image.graph.html" /> 
   </head>
@@ -38,7 +38,7 @@
              accesskey="P">previous</a> |</li>
     <li><a href=../index.html>scikits.image home</a> &raquo;</li>
     
-        <li><a href="../contents.html">v0.2.1 documentation</a> &raquo;</li>
+        <li><a href="../contents.html">v0.3dev documentation</a> &raquo;</li>
 
           <li><a href="api.html" accesskey="U">API Reference</a> &raquo;</li> 
       </ul>
@@ -63,17 +63,20 @@
 <tr><td>Plugin</td>
 <td>Description</td>
 </tr>
-<tr><td>gtk</td>
-<td>Fast image display using the GTK library</td>
-</tr>
 <tr><td>pil</td>
 <td>Image reading via the Python Imaging Library</td>
 </tr>
 <tr><td>qt</td>
 <td>Fast image display using the Qt library</td>
 </tr>
+<tr><td>gtk</td>
+<td>Fast image display using the GTK library</td>
+</tr>
 <tr><td>matplotlib</td>
 <td>Display or save images using Matplotlib</td>
+</tr>
+<tr><td>null</td>
+<td>Default plugin that does nothing</td>
 </tr>
 </tbody>
 </table>
@@ -116,25 +119,21 @@ If None (default), the data-type is determined automatically.</p>
 </tbody>
 </table>
 <p class="rubric">Examples</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">scikits.image.io</span> <span class="kn">import</span> <span class="n">io</span>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">scikits.image.io</span> <span class="kn">as</span> <span class="nn">io</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">scikits.image</span> <span class="kn">import</span> <span class="n">data_dir</span>
 </pre></div>
 </div>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">coll</span> <span class="o">=</span> <span class="n">io</span><span class="o">.</span><span class="n">ImageCollection</span><span class="p">(</span><span class="n">data_dir</span> <span class="o">+</span> <span class="s">&#39;/*.png&#39;</span><span class="p">)</span>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">coll</span> <span class="o">=</span> <span class="n">io</span><span class="o">.</span><span class="n">ImageCollection</span><span class="p">(</span><span class="n">data_dir</span> <span class="o">+</span> <span class="s">&#39;/lena*.png&#39;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="n">coll</span><span class="p">)</span>
 <span class="go">2</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">coll</span><span class="o">.</span><span class="n">files</span>
-<span class="go">[&#39;.../scikits/image/data/camera.png&#39;, .../scikits/image/data/color.png&#39;]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">coll</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span>
-<span class="go">(256, 256)</span>
+<span class="go">(128, 128, 3)</span>
 </pre></div>
 </div>
-<p>When <cite>as_grey</cite> is changed, a color image is returned in grey-scale:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">coll</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span>
-<span class="go">(370, 371, 3)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">coll</span><span class="o">.</span><span class="n">as_grey</span> <span class="o">=</span> <span class="bp">True</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">coll</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span>
-<span class="go">(256, 256)</span>
+<p>When <cite>as_grey</cite> is set to True, a color image is returned in grey-scale:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">coll</span> <span class="o">=</span> <span class="n">io</span><span class="o">.</span><span class="n">ImageCollection</span><span class="p">(</span><span class="n">data_dir</span> <span class="o">+</span> <span class="s">&#39;/lena*.png&#39;</span><span class="p">,</span> <span class="n">as_grey</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">coll</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span>
+<span class="go">(128, 128)</span>
 </pre></div>
 </div>
 <p class="rubric">Attributes</p>
@@ -251,11 +250,10 @@ more often.</p>
 <p>The last accessed frame is cached, all other frames will have to be read
 from file.</p>
 <p class="rubric">Examples</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">os.path</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">fname</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s">&#39;tests&#39;</span><span class="p">,</span> <span class="s">&#39;data&#39;</span><span class="p">,</span> <span class="s">&#39;multipage.tif&#39;</span><span class="p">)</span>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">scikits.image</span> <span class="kn">import</span> <span class="n">data_dir</span>
 </pre></div>
 </div>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">img</span> <span class="o">=</span> <span class="n">MultiImage</span><span class="p">(</span><span class="n">fname</span><span class="p">)</span>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">img</span> <span class="o">=</span> <span class="n">MultiImage</span><span class="p">(</span><span class="n">data_dir</span> <span class="o">+</span> <span class="s">&#39;/multipage.tif&#39;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
 <span class="go">2</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">frame</span> <span class="ow">in</span> <span class="n">img</span><span class="p">:</span>
@@ -683,9 +681,12 @@ pending images, queued via <cite>imshow</cite>. This is required when using
 <p>A call to <cite>show</cite> will block execution of code until all windows
 have been closed.</p>
 <p class="rubric">Examples</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">scikits.image.io</span> <span class="kn">as</span> <span class="nn">io</span>
+</pre></div>
+</div>
 <div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
-<span class="gp">... </span>    <span class="n">imshow</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="mi">50</span><span class="p">,</span> <span class="mi">50</span><span class="p">))</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">show</span><span class="p">()</span>
+<span class="gp">... </span>    <span class="n">io</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="mi">50</span><span class="p">,</span> <span class="mi">50</span><span class="p">)))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">io</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -802,7 +803,7 @@ the plugin is set for all functions.</p>
              >previous</a> |</li>
     <li><a href=../index.html>scikits.image home</a> &raquo;</li>
     
-        <li><a href="../contents.html">v0.2.1 documentation</a> &raquo;</li>
+        <li><a href="../contents.html">v0.3dev documentation</a> &raquo;</li>
 
           <li><a href="api.html" >API Reference</a> &raquo;</li> 
       </ul>

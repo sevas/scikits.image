@@ -33,6 +33,7 @@ div.body {
     background-color: #ffffff;
     color: #000000;
     padding: 0 20px 30px 20px;
+    overflow: auto;
 }
 
 div.footer {
@@ -216,4 +217,25 @@ tt {
 
 th {
     background-color: #ede;
+}
+
+#api-reference ul:first-child {
+  float: left;
+  width: 35em;
+  margin-top: 0;
+  padding-top: 0;
+  list-style: none;
+  overflow: auto;
+}
+
+#api-reference li {
+  float: left;
+  position: relative;
+  margin-right: 1em;
+  width: 17em;
+  padding: 0;
+}
+
+.field-list {
+  font-size: 80%;
 }

@@ -8,9 +8,15 @@ Module: :mod:`graph`
 .. autosummary::
 
    scikits.image.graph.shortest_path
+   scikits.image.graph.trace_path
 
 shortest_path
 -------------
 
 .. autofunction:: scikits.image.graph.shortest_path
+
+trace_path
+----------
+
+.. autofunction:: scikits.image.graph.trace_path
 

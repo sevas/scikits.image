@@ -1,0 +1,521 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Module: morphology &mdash; v0.3dev documentation</title>
+    <link rel="stylesheet" href="../static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.3dev',
+        COLLAPSE_MODINDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../static/jquery.js"></script>
+    <script type="text/javascript" src="../static/doctools.js"></script>
+    <link rel="top" title="v0.3dev documentation" href="../index.html" />
+    <link rel="up" title="API Reference" href="api.html" />
+    <link rel="next" title="Module: opencv" href="scikits.image.opencv.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../modindex.html" title="Global Module Index"
+             accesskey="M">modules</a> |</li>
+        <li class="right" >
+          <a href="scikits.image.opencv.html" title="Module: opencv"
+             accesskey="N">next</a> |</li>
+    <li><a href=../index.html>scikits.image home</a> &raquo;</li>
+    
+        <li><a href="../contents.html">v0.3dev documentation</a> &raquo;</li>
+
+          <li><a href="api.html" accesskey="U">API Reference</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="module-scikits.image.morphology">
+<h1>Module: <tt class="xref docutils literal"><span class="pre">morphology</span></tt><a class="headerlink" href="#module-scikits.image.morphology" title="Permalink to this headline">¶</a></h1>
+<table border="1" class="docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr><td><a title="scikits.image.morphology.diamond" class="reference internal" href="#scikits.image.morphology.diamond"><tt class="xref docutils literal"><span class="pre">scikits.image.morphology.diamond</span></tt></a>(radius[,&nbsp;dtype])</td>
+<td>Generates a flat, diamond-shaped structuring element of a given radius.</td>
+</tr>
+<tr><td><a title="scikits.image.morphology.disk" class="reference internal" href="#scikits.image.morphology.disk"><tt class="xref docutils literal"><span class="pre">scikits.image.morphology.disk</span></tt></a>(radius[,&nbsp;dtype])</td>
+<td>Generates a flat, disk-shaped structuring element of a given radius.</td>
+</tr>
+<tr><td><a title="scikits.image.morphology.greyscale_black_top_hat" class="reference internal" href="#scikits.image.morphology.greyscale_black_top_hat"><tt class="xref docutils literal"><span class="pre">scikits.image.morphology.greyscale_black_top_hat</span></tt></a>(...)</td>
+<td>Applies a black top hat on an image given a structuring element.</td>
+</tr>
+<tr><td><a title="scikits.image.morphology.greyscale_close" class="reference internal" href="#scikits.image.morphology.greyscale_close"><tt class="xref docutils literal"><span class="pre">scikits.image.morphology.greyscale_close</span></tt></a>(...)</td>
+<td>Performs a greyscale morphological closing on an image given a structuring element defined as a dilation followed by an erosion.</td>
+</tr>
+<tr><td><a title="scikits.image.morphology.greyscale_dilate" class="reference internal" href="#scikits.image.morphology.greyscale_dilate"><tt class="xref docutils literal"><span class="pre">scikits.image.morphology.greyscale_dilate</span></tt></a>(...)</td>
+<td>Performs a greyscale morphological dilation on an image given a structuring element.</td>
+</tr>
+<tr><td><a title="scikits.image.morphology.greyscale_erode" class="reference internal" href="#scikits.image.morphology.greyscale_erode"><tt class="xref docutils literal"><span class="pre">scikits.image.morphology.greyscale_erode</span></tt></a>(...)</td>
+<td>Performs a greyscale morphological erosion on an image given a structuring element.</td>
+</tr>
+<tr><td><a title="scikits.image.morphology.greyscale_open" class="reference internal" href="#scikits.image.morphology.greyscale_open"><tt class="xref docutils literal"><span class="pre">scikits.image.morphology.greyscale_open</span></tt></a>(...)</td>
+<td>Performs a greyscale morphological opening on an image given a structuring element defined as a erosion followed by a dilation.</td>
+</tr>
+<tr><td><a title="scikits.image.morphology.greyscale_white_top_hat" class="reference internal" href="#scikits.image.morphology.greyscale_white_top_hat"><tt class="xref docutils literal"><span class="pre">scikits.image.morphology.greyscale_white_top_hat</span></tt></a>(...)</td>
+<td>Applies a white top hat on an image given a structuring element.</td>
+</tr>
+<tr><td><a title="scikits.image.morphology.rectangle" class="reference internal" href="#scikits.image.morphology.rectangle"><tt class="xref docutils literal"><span class="pre">scikits.image.morphology.rectangle</span></tt></a>(width,&nbsp;height)</td>
+<td>Generates a flat, rectangular-shaped structuring element of a given width and height.</td>
+</tr>
+<tr><td><a title="scikits.image.morphology.square" class="reference internal" href="#scikits.image.morphology.square"><tt class="xref docutils literal"><span class="pre">scikits.image.morphology.square</span></tt></a>(width[,&nbsp;dtype])</td>
+<td>Generates a flat, square-shaped structuring element.</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="diamond">
+<h2>diamond<a class="headerlink" href="#diamond" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="scikits.image.morphology.diamond">
+<tt class="descclassname">scikits.image.morphology.</tt><tt class="descname">diamond</tt><big>(</big><em>radius</em>, <em>dtype=&lt;type 'numpy.uint8'&gt;</em><big>)</big><a class="headerlink" href="#scikits.image.morphology.diamond" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generates a flat, diamond-shaped structuring element of a given
+radius.  A pixel is part of the neighborhood (i.e. labeled 1) iff
+the city block/manhattan distance between it and the center of the
+neighborhood is no greater than radius.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>radius</strong> : string</p>
+<blockquote>
+<p>The radius of the disk-shaped structuring element.</p>
+</blockquote>
+<p><strong>dtype</strong> : data-type</p>
+<blockquote>
+<p>The data type of the structuring element.</p>
+</blockquote>
+</td>
+</tr>
+<tr class="field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>selem</strong> : ndarray</p>
+<blockquote class="last">
+<p>The structuring element where elements of the neighborhood
+are 1 and 0 otherwise.</p>
+</blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="disk">
+<h2>disk<a class="headerlink" href="#disk" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="scikits.image.morphology.disk">
+<tt class="descclassname">scikits.image.morphology.</tt><tt class="descname">disk</tt><big>(</big><em>radius</em>, <em>dtype=&lt;type 'numpy.uint8'&gt;</em><big>)</big><a class="headerlink" href="#scikits.image.morphology.disk" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generates a flat, disk-shaped structuring element of a given radius.
+A pixel is within the neighborhood iff the euclidean distance between
+it and the origin is no greater than a radius.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>radius</strong> : string</p>
+<blockquote>
+<p>The radius of the disk-shaped structuring element.</p>
+</blockquote>
+<p><strong>dtype</strong> : data-type</p>
+<blockquote>
+<p>The data type of the structuring element.</p>
+</blockquote>
+</td>
+</tr>
+<tr class="field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>selem</strong> : ndarray</p>
+<blockquote class="last">
+<p>The structuring element where elements of the neighborhood
+are 1 and 0 otherwise.</p>
+</blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="greyscale-black-top-hat">
+<h2>greyscale_black_top_hat<a class="headerlink" href="#greyscale-black-top-hat" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="scikits.image.morphology.greyscale_black_top_hat">
+<tt class="descclassname">scikits.image.morphology.</tt><tt class="descname">greyscale_black_top_hat</tt><big>(</big><em>image</em>, <em>selem</em>, <em>out=None</em><big>)</big><a class="headerlink" href="#scikits.image.morphology.greyscale_black_top_hat" title="Permalink to this definition">¶</a></dt>
+<dd><p>Applies a black top hat on an image given a structuring element.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>image</strong> : ndarray</p>
+<blockquote>
+<p>The image as an ndarray.</p>
+</blockquote>
+<p><strong>selem</strong> : ndarray</p>
+<blockquote>
+<p>The neighborhood expressed as a 2-D array of 1&#8217;s and 0&#8217;s.</p>
+</blockquote>
+<p><strong>out</strong> : ndarray</p>
+<blockquote>
+<p>The array to store the result of the morphology. If None
+is passed, a new array will be allocated.</p>
+</blockquote>
+</td>
+</tr>
+<tr class="field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>opening</strong> : ndarray</p>
+<blockquote class="last">
+<p>The result of the black top filter.</p>
+</blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="greyscale-close">
+<h2>greyscale_close<a class="headerlink" href="#greyscale-close" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="scikits.image.morphology.greyscale_close">
+<tt class="descclassname">scikits.image.morphology.</tt><tt class="descname">greyscale_close</tt><big>(</big><em>image</em>, <em>selem</em>, <em>out=None</em><big>)</big><a class="headerlink" href="#scikits.image.morphology.greyscale_close" title="Permalink to this definition">¶</a></dt>
+<dd><p>Performs a greyscale morphological closing on an image given a
+structuring element defined as a dilation followed by an erosion.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>image</strong> : ndarray</p>
+<blockquote>
+<p>The image as an ndarray.</p>
+</blockquote>
+<p><strong>selem</strong> : ndarray</p>
+<blockquote>
+<p>The neighborhood expressed as a 2-D array of 1&#8217;s and 0&#8217;s.</p>
+</blockquote>
+<p><strong>out</strong> : ndarray</p>
+<blockquote>
+<p>The array to store the result of the morphology. If None,
+is passed, a new array will be allocated.</p>
+</blockquote>
+</td>
+</tr>
+<tr class="field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>opening</strong> : ndarray</p>
+<blockquote class="last">
+<p>The result of the morphological opening.</p>
+</blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="greyscale-dilate">
+<h2>greyscale_dilate<a class="headerlink" href="#greyscale-dilate" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="scikits.image.morphology.greyscale_dilate">
+<tt class="descclassname">scikits.image.morphology.</tt><tt class="descname">greyscale_dilate</tt><big>(</big><em>image</em>, <em>selem</em>, <em>out=None</em><big>)</big><a class="headerlink" href="#scikits.image.morphology.greyscale_dilate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Performs a greyscale morphological dilation on an image given a
+structuring element. The dilated pixel at (i,j) is the maximum
+over all pixels in the neighborhood centered at (i,j).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>image</strong> : ndarray</p>
+<blockquote>
+<p>The image as an ndarray.</p>
+</blockquote>
+<p><strong>selem</strong> : ndarray</p>
+<blockquote>
+<p>The neighborhood expressed as a 2-D array of 1&#8217;s and 0&#8217;s.</p>
+</blockquote>
+<p><strong>out</strong> : ndarray</p>
+<blockquote>
+<p>The array to store the result of the morphology. If None, is
+passed, a new array will be allocated.</p>
+</blockquote>
+</td>
+</tr>
+<tr class="field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>dilated</strong> : ndarray</p>
+<blockquote class="last">
+<p>The result of the morphological dilation.</p>
+</blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="greyscale-erode">
+<h2>greyscale_erode<a class="headerlink" href="#greyscale-erode" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="scikits.image.morphology.greyscale_erode">
+<tt class="descclassname">scikits.image.morphology.</tt><tt class="descname">greyscale_erode</tt><big>(</big><em>image</em>, <em>selem</em>, <em>out=None</em><big>)</big><a class="headerlink" href="#scikits.image.morphology.greyscale_erode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Performs a greyscale morphological erosion on an image given a
+structuring element. The eroded pixel at (i,j) is the minimum
+over all pixels in the neighborhood centered at (i,j).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>image</strong> : ndarray</p>
+<blockquote>
+<p>The image as an ndarray.</p>
+</blockquote>
+<p><strong>selem</strong> : ndarray</p>
+<blockquote>
+<p>The neighborhood expressed as a 2-D array of 1&#8217;s and 0&#8217;s.</p>
+</blockquote>
+<p><strong>out</strong> : ndarray</p>
+<blockquote>
+<p>The array to store the result of the morphology. If None is
+passed, a new array will be allocated.</p>
+</blockquote>
+</td>
+</tr>
+<tr class="field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>eroded</strong> : ndarray</p>
+<blockquote class="last">
+<p>The result of the morphological erosion.</p>
+</blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="greyscale-open">
+<h2>greyscale_open<a class="headerlink" href="#greyscale-open" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="scikits.image.morphology.greyscale_open">
+<tt class="descclassname">scikits.image.morphology.</tt><tt class="descname">greyscale_open</tt><big>(</big><em>image</em>, <em>selem</em>, <em>out=None</em><big>)</big><a class="headerlink" href="#scikits.image.morphology.greyscale_open" title="Permalink to this definition">¶</a></dt>
+<dd><p>Performs a greyscale morphological opening on an image given a
+structuring element defined as a erosion followed by a dilation.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>image</strong> : ndarray</p>
+<blockquote>
+<p>The image as an ndarray.</p>
+</blockquote>
+<p><strong>selem</strong> : ndarray</p>
+<blockquote>
+<p>The neighborhood expressed as a 2-D array of 1&#8217;s and 0&#8217;s.</p>
+</blockquote>
+<p><strong>out</strong> : ndarray</p>
+<blockquote>
+<p>The array to store the result of the morphology. If None
+is passed, a new array will be allocated.</p>
+</blockquote>
+</td>
+</tr>
+<tr class="field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>opening</strong> : ndarray</p>
+<blockquote class="last">
+<p>The result of the morphological opening.</p>
+</blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="greyscale-white-top-hat">
+<h2>greyscale_white_top_hat<a class="headerlink" href="#greyscale-white-top-hat" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="scikits.image.morphology.greyscale_white_top_hat">
+<tt class="descclassname">scikits.image.morphology.</tt><tt class="descname">greyscale_white_top_hat</tt><big>(</big><em>image</em>, <em>selem</em>, <em>out=None</em><big>)</big><a class="headerlink" href="#scikits.image.morphology.greyscale_white_top_hat" title="Permalink to this definition">¶</a></dt>
+<dd><p>Applies a white top hat on an image given a structuring element.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>image</strong> : ndarray</p>
+<blockquote>
+<p>The image as an ndarray.</p>
+</blockquote>
+<p><strong>selem</strong> : ndarray</p>
+<blockquote>
+<p>The neighborhood expressed as a 2-D array of 1&#8217;s and 0&#8217;s.</p>
+</blockquote>
+<p><strong>out</strong> : ndarray</p>
+<blockquote>
+<p>The array to store the result of the morphology. If None
+is passed, a new array will be allocated.</p>
+</blockquote>
+</td>
+</tr>
+<tr class="field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>opening</strong> : ndarray</p>
+<blockquote class="last">
+<p>The result of the morphological white top hat.</p>
+</blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="rectangle">
+<h2>rectangle<a class="headerlink" href="#rectangle" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="scikits.image.morphology.rectangle">
+<tt class="descclassname">scikits.image.morphology.</tt><tt class="descname">rectangle</tt><big>(</big><em>width</em>, <em>height</em>, <em>dtype=&lt;type 'numpy.uint8'&gt;</em><big>)</big><a class="headerlink" href="#scikits.image.morphology.rectangle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generates a flat, rectangular-shaped structuring element of a
+given width and height. Every pixel in the rectangle belongs
+to the neighboorhood.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>width</strong> : int</p>
+<blockquote>
+<p>The width of the rectangle</p>
+</blockquote>
+<p><strong>height</strong> : int</p>
+<blockquote>
+<p>The height of the rectangle</p>
+</blockquote>
+</td>
+</tr>
+<tr class="field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>selem</strong> : ndarray</p>
+<blockquote class="last">
+<p>A structuring element consisting only of ones, i.e. every
+pixel belongs to the neighborhood.</p>
+</blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="square">
+<h2>square<a class="headerlink" href="#square" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="scikits.image.morphology.square">
+<tt class="descclassname">scikits.image.morphology.</tt><tt class="descname">square</tt><big>(</big><em>width</em>, <em>dtype=&lt;type 'numpy.uint8'&gt;</em><big>)</big><a class="headerlink" href="#scikits.image.morphology.square" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generates a flat, square-shaped structuring element. Every pixel
+along the perimeter has a chessboard distance no greater than radius
+(radius=floor(width/2)) pixels.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>width</strong> : int</p>
+<blockquote>
+<p>The width and height of the square</p>
+</blockquote>
+</td>
+</tr>
+<tr class="field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>selem</strong> : ndarray</p>
+<blockquote class="last">
+<p>A structuring element consisting only of ones, i.e. every
+pixel belongs to the neighborhood.</p>
+</blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <h3><a href="../contents.html">Table Of Contents</a></h3>
+            <ul>
+<li><a class="reference external" href="">Module: <tt class="docutils literal"><span class="pre">morphology</span></tt></a><ul>
+<li><a class="reference external" href="#diamond">diamond</a></li>
+<li><a class="reference external" href="#disk">disk</a></li>
+<li><a class="reference external" href="#greyscale-black-top-hat">greyscale_black_top_hat</a></li>
+<li><a class="reference external" href="#greyscale-close">greyscale_close</a></li>
+<li><a class="reference external" href="#greyscale-dilate">greyscale_dilate</a></li>
+<li><a class="reference external" href="#greyscale-erode">greyscale_erode</a></li>
+<li><a class="reference external" href="#greyscale-open">greyscale_open</a></li>
+<li><a class="reference external" href="#greyscale-white-top-hat">greyscale_white_top_hat</a></li>
+<li><a class="reference external" href="#rectangle">rectangle</a></li>
+<li><a class="reference external" href="#square">square</a></li>
+</ul>
+</li>
+</ul>
+
+            <h4>Next topic</h4>
+            <p class="topless"><a href="scikits.image.opencv.html"
+                                  title="next chapter">Module: <tt class="docutils literal"><span class="pre">opencv</span></tt></a></p>
+            <h3>This Page</h3>
+            <ul class="this-page-menu">
+              <li><a href="../_sources/api/scikits.image.morphology.txt"
+                     rel="nofollow">Show Source</a></li>
+            </ul>
+          <div id="searchbox" style="display: none">
+            <h3>Quick search</h3>
+              <form class="search" action="../search.html" method="get">
+                <input type="text" name="q" size="18" />
+                <input type="submit" value="Go" />
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+              <p class="searchtip" style="font-size: 90%">
+              Enter search terms or a module, class or function name.
+              </p>
+          </div>
+          <script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../modindex.html" title="Global Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="scikits.image.opencv.html" title="Module: opencv"
+             >next</a> |</li>
+    <li><a href=../index.html>scikits.image home</a> &raquo;</li>
+    
+        <li><a href="../contents.html">v0.3dev documentation</a> &raquo;</li>
+
+          <li><a href="api.html" >API Reference</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2009, SciPy Developers.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.
+    </div>
+  </body>
+</html>
