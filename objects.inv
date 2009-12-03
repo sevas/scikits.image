@@ -6,6 +6,7 @@ scikits.image.transform mod api/scikits.image.transform.html
 scikits.image.io mod api/scikits.image.io.html
 scikits.image.morphology mod api/scikits.image.morphology.html
 scikits.image.opencv mod api/scikits.image.opencv.html
+scikits.image mod api/scikits.image.html
 scikits.image.color mod api/scikits.image.color.html
 scikits.image.graph mod api/scikits.image.graph.html
 scikits.image.opencv.cvCalibrateCamera2 function api/scikits.image.opencv.html
@@ -45,7 +46,7 @@ scikits.image.io.use_plugin function api/scikits.image.io.html
 scikits.image.opencv.cvCornerHarris function api/scikits.image.opencv.html
 scikits.image.morphology.greyscale_dilate function api/scikits.image.morphology.html
 scikits.image.filter.LPIFilter2D class api/scikits.image.filter.html
-scikits.image.opencv.cvIntegral function api/scikits.image.opencv.html
+scikits.image.get_log function api/scikits.image.html
 scikits.image.morphology.greyscale_black_top_hat function api/scikits.image.morphology.html
 scikits.image.morphology.disk function api/scikits.image.morphology.html
 scikits.image.morphology.greyscale_white_top_hat function api/scikits.image.morphology.html
@@ -73,7 +74,7 @@ scikits.image.opencv.cvUndistort2 function api/scikits.image.opencv.html
 scikits.image.io.plugins function api/scikits.image.io.html
 scikits.image.color.convert_colorspace function api/scikits.image.color.html
 scikits.image.morphology.square function api/scikits.image.morphology.html
-scikits.image.opencv.cvResize function api/scikits.image.opencv.html
+scikits.image.opencv.cvIntegral function api/scikits.image.opencv.html
 scikits.image.filter.wiener function api/scikits.image.filter.html
 scikits.image.opencv.cvSobel function api/scikits.image.opencv.html
 scikits.image.transform.hough function api/scikits.image.transform.html
@@ -85,6 +86,7 @@ scikits.image.io.ImageCollection class api/scikits.image.io.html
 scikits.image.opencv.cvAdaptiveThreshold function api/scikits.image.opencv.html
 scikits.image.morphology.greyscale_close function api/scikits.image.morphology.html
 scikits.image.io.ImageCollection.as_grey attribute api/scikits.image.io.html
+scikits.image.opencv.cvResize function api/scikits.image.opencv.html
 scikits.image.io.ImageCollection.conserve_memory attribute api/scikits.image.io.html
 scikits.image.opencv.cvFindChessboardCorners function api/scikits.image.opencv.html
 scikits.image.io.MultiImage.__init__ method api/scikits.image.io.html
