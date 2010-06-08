@@ -10,4 +10,6 @@ def myconfigure(ctx):
         ctx = yaku.context.get_cfg()
         # TODO: tool configuration (ensuring cython version, etc...)
         ctx.use_tools(["cython"])
+        from numpy.distutils.misc_util import get_numpy_include_dirs
+        ctx.env["CPPPATH"].extend(get_numpy_include_dirs())
         ctx.store()
