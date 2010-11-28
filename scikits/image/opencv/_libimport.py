@@ -37,7 +37,7 @@ def _import_opencv_lib(which="cv"):
         extensions = ['.dylib']
     else:
         extensions = ['.dll']
-        library_paths = []
+        library_paths = ['']
 
     lib = 'lib' + which
     shared_lib = None
